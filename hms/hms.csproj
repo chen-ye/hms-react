@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{0B44010B-6267-4FCB-A634-431870AA6EE8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.6</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="build\**\*.*" />
+    <Content Include="client\lib\semantic-ui\definitions\behaviors\api.js" />
+    <Content Include="client\lib\semantic-ui\definitions\behaviors\colorize.js" />
+    <Content Include="client\lib\semantic-ui\definitions\behaviors\form.js" />
+    <Content Include="client\lib\semantic-ui\definitions\behaviors\state.js" />
+    <Content Include="client\lib\semantic-ui\definitions\behaviors\visibility.js" />
+    <Content Include="client\lib\semantic-ui\definitions\behaviors\visit.js" />
+    <Content Include="client\lib\semantic-ui\definitions\globals\site.js" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\accordion.js" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\checkbox.js" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\dimmer.js" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\dropdown.js" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\embed.js" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\modal.js" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\nag.js" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\popup.js" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\progress.js" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\rating.js" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\search.js" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\shape.js" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\sidebar.js" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\sticky.js" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\tab.js" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\transition.js" />
+    <Content Include="docs\**\*.*" />
+    <Content Include="hms.css" />
+    <Content Include="hms.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AccountsUIWrapper.jsx" />
+    <Content Include="App.jsx" />
+    <Content Include="client\lib\semantic-ui\.custom.semantic.json" />
+    <Content Include="client\lib\semantic-ui\custom.semantic.json" />
+    <Content Include="client\lib\semantic-ui\definitions\collections\breadcrumb.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\collections\form.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\collections\grid.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\collections\menu.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\collections\message.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\collections\table.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\elements\button.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\elements\container.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\elements\divider.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\elements\flag.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\elements\header.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\elements\icon.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\elements\image.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\elements\input.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\elements\label.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\elements\list.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\elements\loader.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\elements\rail.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\elements\reveal.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\elements\segment.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\elements\step.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\globals\reset.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\globals\site.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\accordion.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\checkbox.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\dimmer.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\dropdown.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\embed.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\modal.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\nag.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\popup.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\progress.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\rating.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\search.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\shape.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\sidebar.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\sticky.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\tab.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\modules\transition.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\views\ad.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\views\card.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\views\comment.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\views\feed.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\views\item.import.less" />
+    <Content Include="client\lib\semantic-ui\definitions\views\statistic.import.less" />
+    <Content Include="client\lib\semantic-ui\semantic.less" />
+    <Content Include="client\lib\semantic-ui\site\collections\breadcrumb.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\collections\breadcrumb.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\collections\form.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\collections\form.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\collections\grid.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\collections\grid.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\collections\menu.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\collections\menu.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\collections\message.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\collections\message.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\collections\table.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\collections\table.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\button.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\button.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\container.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\container.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\divider.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\divider.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\flag.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\flag.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\header.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\header.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\icon.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\icon.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\image.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\image.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\input.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\input.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\label.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\label.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\list.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\list.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\loader.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\loader.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\rail.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\rail.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\reveal.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\reveal.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\segment.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\segment.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\step.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\elements\step.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\globals\reset.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\globals\reset.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\globals\site.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\globals\site.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\accordion.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\accordion.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\checkbox.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\checkbox.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\dimmer.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\dimmer.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\dropdown.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\dropdown.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\embed.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\embed.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\modal.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\modal.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\nag.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\nag.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\popup.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\popup.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\progress.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\progress.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\rating.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\rating.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\search.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\search.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\shape.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\shape.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\sidebar.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\sidebar.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\sticky.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\sticky.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\tab.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\tab.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\transition.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\modules\transition.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\views\ad.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\views\ad.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\views\card.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\views\card.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\views\comment.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\views\comment.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\views\feed.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\views\feed.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\views\item.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\views\item.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\site\views\statistic.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\site\views\statistic.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\theme.config.import.less" />
+    <Content Include="client\lib\semantic-ui\theme.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\collections\breadcrumb.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\collections\breadcrumb.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\collections\form.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\collections\form.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\collections\grid.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\collections\grid.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\collections\menu.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\collections\menu.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\collections\message.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\collections\message.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\collections\table.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\collections\table.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\button.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\button.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\container.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\container.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\divider.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\divider.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\flag.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\flag.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\header.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\header.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\icon.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\icon.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\image.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\image.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\input.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\input.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\label.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\label.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\list.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\list.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\loader.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\loader.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\rail.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\rail.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\reveal.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\reveal.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\segment.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\segment.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\step.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\elements\step.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\globals\reset.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\globals\reset.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\globals\site.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\globals\site.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\accordion.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\accordion.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\checkbox.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\checkbox.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\dimmer.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\dimmer.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\dropdown.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\dropdown.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\embed.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\embed.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\modal.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\modal.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\nag.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\nag.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\popup.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\popup.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\progress.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\progress.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\rating.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\rating.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\search.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\search.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\shape.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\shape.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\sidebar.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\sidebar.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\sticky.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\sticky.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\tab.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\tab.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\transition.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\modules\transition.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\views\ad.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\views\ad.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\views\card.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\views\card.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\views\comment.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\views\comment.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\views\feed.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\views\feed.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\views\item.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\views\item.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\views\statistic.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\default\views\statistic.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\flat\collections\form.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\flat\collections\form.variables.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\flat\globals\site.overrides.import.less" />
+    <Content Include="client\lib\semantic-ui\themes\flat\globals\site.variables.import.less" />
+    <Content Include="hms.jsx" />
+    <Content Include="Task.jsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>hms</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57173</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:57173/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
