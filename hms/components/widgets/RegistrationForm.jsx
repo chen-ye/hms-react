@@ -82,7 +82,7 @@ RegistrationForm = React.createClass({
           </div>
           <div className="three wide field">
             <label>Year</label>
-            <div className="ui fluid selection dropdown">
+            <div className="ui fluid search selection dropdown">
               <input type="hidden" name="year"/>
               <div className="default text">Select Year</div>
               <i className="dropdown icon"></i>

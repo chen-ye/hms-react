@@ -1,0 +1,243 @@
+/*******************************
+         Site Overrides
+*******************************/
+.react-selectize {
+  color: @inputColor;
+  background: @background;
+  border-radius: @borderRadius;
+  font-family: @inputFont;
+  user-select: none;
+  position: relative;
+  line-height: 1em;
+  box-shadow: 0px -2px 0em 0em @unselectedTextColor inset;
+  transition: box-shadow .1s ease, color .1s ease;
+
+  &.open {
+    box-shadow: 0px -4em 0em 0em @darkTextColor inset;
+    color: @invertedTextColor;
+
+    .control .placeholder {
+      color: @placeholderFocusColor;
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+  }
+
+  .control {
+    border-radius: @borderRadius;
+    cursor: pointer;
+    font-size: @relativeMedium;
+    transition: all 0.1s ease;
+    position: relative;
+    z-index: 9;
+
+    .placeholder {
+      color: @placeholderColor;
+      padding: 8px 0px 8px 10px;
+      max-width: -webkit-calc(100% - 52px);
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      position: absolute;
+      top: 0;
+      left: 0px;
+    }
+
+    input {
+      height: 2.5em;
+      line-height: 2.5em;
+      background: none;
+      border: none;
+      outline: none;
+      font-size: 1em;
+      margin: 0;
+      padding: (@verticalPadding - @lineHeightOffset) 0;
+      vertical-align: top;
+      width: 0px;
+    }
+
+    .reset {
+      color: #999;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 16px;
+      padding: 6px 10px;
+      position: absolute;
+      right: 17px;
+      top: 0;
+
+      &:hover {
+        color: #c0392b;
+      }
+    }
+
+    .arrow {
+      font-family: 'Dropdown';
+      height: 1em;
+      width: auto;
+      right: 1em;
+      top: 0px;
+      font-size: 0.85714286em;
+      opacity: .8;
+      padding: 0.78571429em;
+      margin: 0 -0.78571429em;
+      display: block;
+      position: absolute;
+
+      &::before {
+        content: '\f0d7'
+      }
+    }
+
+    .value-wrapper {
+      display: inline-block;
+      height: 2.5em;
+      line-height: 2.5em;
+    }
+  }
+
+  .dropdown {
+    background: #fff;
+    border: 1px solid #ccc;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    max-height: 200px;
+    overflow: auto;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+
+    .option-wrapper.highlight {
+      background: #f2f9fc;
+      color: #333;
+    }
+  }
+
+  &.flipped {
+
+    &.open {
+      .control {
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+
+      }
+
+      .dropdown {
+        border-bottom: none;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+      }
+    }
+  }
+
+  &:not(.flipped) {
+
+    &.open {
+      .dropdown {
+        border-color: #b3b3b3 #ccc #d9d9d9;
+        border-top: none;
+      }
+    }
+  }
+
+  .groups.as-columns {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+
+    > div {
+      -webkit-box-flex: 1;
+      -moz-box-flex: 1;
+      -o-box-flex: 1;
+      box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+    }
+  }
+
+  .no-results-found {
+    color: #aaa !important;
+    font-style: oblique;
+    padding: 8px 10px;
+
+    &.red {
+      color: #f00 !important;
+    }
+  }
+
+  .simple-group-title {
+    color: @placeholderColor;
+    background-color: #fafafa;
+    padding: 8px 8px;
+  }
+
+  .simple-option {
+    color: #666;
+    cursor: pointer;
+    padding: 8px 10px;
+
+    &.not-selectable {
+      background-color: #f8f8f8;
+      color: #999;
+      cursor: default;
+      font-style: oblique;
+      text-shadow: 0px 1px 0px #fff;
+    }
+  }
+
+  &.simple-select{
+
+    .control {
+      padding: 0 @horizontalPadding;
+
+      .placeholder {
+        padding: @padding;
+      }
+    }
+
+    .reset {
+      display: none;
+    }
+
+    .simple-value {
+      display: inline-block;
+      vertical-align: top;
+
+      span {
+        cursor: default;
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+  }
+
+  &.multi-select {
+    .simple-value {
+      background: #f2f9fc;
+      border: 1px solid #c9e6f2;
+      -webkit-border-radius: 2px;
+      border-radius: 2px;
+      color: #08c;
+      display: inline-block;
+      margin: 2px;
+      vertical-align: top;
+
+      span {
+        cursor: pointer;
+        display: inline-block;
+        padding: 2px 5px 4px;
+        vertical-align: top;
+      }
+    }
+  }
+}

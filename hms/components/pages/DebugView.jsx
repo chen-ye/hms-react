@@ -1,5 +1,5 @@
 // App component - represents the whole app
-App = React.createClass({
+DebugView = React.createClass({
     render() {
         return (
       <div className="ui one column grid container">

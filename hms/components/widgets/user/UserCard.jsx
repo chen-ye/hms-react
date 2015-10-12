@@ -6,18 +6,18 @@ UserCard = React.createClass({
         user: React.PropTypes.object.isRequired
     },
     render() {
-        console.log(this.props.user)
+        //console.log(this.props.user);
         return (
       <div className="ui card">
         <div className="content">
           <div className="header">{this.props.user.profile.name}</div>
           <div className="meta">
             <span className="date">{this.props.user.roles.map((role) => {
-                return <span key={role}>{role}</span>
+                return <span key={role}>{role}</span>;
               })}</span>
           </div>
           <div className="description">
-              
+
           </div>
         </div>
     </div>

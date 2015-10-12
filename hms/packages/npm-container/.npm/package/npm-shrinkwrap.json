@@ -155,7 +155,7 @@
       }
     },
     "react-selectize": {
-      "version": "0.3.1",
+      "version": "0.2.6",
       "dependencies": {
         "prelude-extension": {
           "version": "0.0.5"
@@ -216,9 +216,6 @@
               }
             }
           }
-        },
-        "react-dom": {
-          "version": "0.14.0"
         },
         "history": {
           "version": "1.11.0",

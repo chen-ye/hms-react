@@ -73,7 +73,7 @@
 /* This adjusts the default form input across all elements */
 @inputBackground        : @white;
 @inputVerticalPadding   : @relative11px;
-@inputHorizontalPadding : @relative14px;
+@inputHorizontalPadding : @relative10px;
 @inputPadding           : @inputVerticalPadding @inputHorizontalPadding;
 
 /* Line Height Default For Inputs in Browser */
@@ -373,6 +373,7 @@
 @absoluteMassive : unit( round(@massiveSize * @emSize) / @emSize, rem);
 
 
+
 /*-------------------
   Exact Pixel Values
 --------------------*/
@@ -445,6 +446,10 @@
 @invertedPressedTextColor    : rgba(255, 255, 255, 1);
 @invertedSelectedTextColor   : rgba(255, 255, 255, 1);
 @invertedDisabledTextColor   : rgba(255, 255, 255, 0.2);
+
+/* Placeholder */
+@placeholderColor: @unselectedTextColor;
+@placeholderFocusColor: @invertedUnselectedTextColor;
 
 /*-------------------
      Brand Colors
