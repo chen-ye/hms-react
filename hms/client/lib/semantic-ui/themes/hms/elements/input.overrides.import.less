@@ -9,15 +9,15 @@
   user-select: none;
   position: relative;
   line-height: 1em;
-  box-shadow: 0px -2px 0em 0em @unselectedTextColor inset;
-  transition: box-shadow .1s ease, color .1s ease;
 
   &.open {
-    box-shadow: 0px -4em 0em 0em @darkTextColor inset;
-    color: @invertedTextColor;
+    .control {
+      box-shadow: 0px -5em 0em 0em @darkTextColor inset;
+      color: @invertedTextColor;
 
-    .control .placeholder {
-      color: @placeholderFocusColor;
+      .placeholder {
+        color: @placeholderFocusColor;
+      }
     }
   }
 
@@ -27,15 +27,18 @@
 
   .control {
     border-radius: @borderRadius;
-    cursor: pointer;
+    cursor: text;
     font-size: @relativeMedium;
     transition: all 0.1s ease;
     position: relative;
     z-index: 9;
+    box-shadow: 0px -2px 0em 0em @unselectedTextColor inset;
+    transition: box-shadow .1s ease, color .1s ease;
 
     .placeholder {
       color: @placeholderColor;
-      padding: 8px 0px 8px 10px;
+      padding: 0 @horizontalPadding;
+      line-height: 2.5em;
       max-width: -webkit-calc(100% - 52px);
       overflow: hidden;
       -o-text-overflow: ellipsis;
@@ -60,7 +63,7 @@
     }
 
     .reset {
-      color: #999;
+      color: @lightTextColor;
       cursor: pointer;
       display: inline-block;
       font-size: 16px;
@@ -70,7 +73,7 @@
       top: 0;
 
       &:hover {
-        color: #c0392b;
+        color: @redTextColor;
       }
     }
 
@@ -101,9 +104,7 @@
 
   .dropdown {
     background: #fff;
-    border: 1px solid #ccc;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+    border: 1px solid @borderColor;
     box-sizing: border-box;
     max-height: 200px;
     overflow: auto;
@@ -112,26 +113,16 @@
     z-index: 10;
 
     .option-wrapper.highlight {
-      background: #f2f9fc;
-      color: #333;
+      background: @transparentBlack;
+      color: @selectedTextColor;
     }
   }
 
   &.flipped {
 
     &.open {
-      .control {
-        border-bottom-left-radius: 4px;
-        border-bottom-right-radius: 4px;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-
-      }
-
       .dropdown {
         border-bottom: none;
-        border-top-left-radius: 4px;
-        border-top-right-radius: 4px;
       }
     }
   }
@@ -147,51 +138,43 @@
   }
 
   .groups.as-columns {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: box;
     display: flex;
 
     > div {
-      -webkit-box-flex: 1;
-      -moz-box-flex: 1;
-      -o-box-flex: 1;
       box-flex: 1;
-      -webkit-flex: 1;
-      -ms-flex: 1;
       flex: 1;
     }
   }
 
   .no-results-found {
-    color: #aaa !important;
-    font-style: oblique;
+    color: @lightTextColor !important;
     padding: 8px 10px;
 
     &.red {
-      color: #f00 !important;
+      color: @redTextColor !important;
     }
   }
 
   .simple-group-title {
-    color: @placeholderColor;
+    color: @darkTextColor;
+    font-size: 0.78571429em;
+    font-weight: bold;
+    text-transform: uppercase;
     background-color: #fafafa;
-    padding: 8px 8px;
+    padding: @selectionItemPadding;
   }
 
   .simple-option {
-    color: #666;
+    color: @darkTextColor;
     cursor: pointer;
-    padding: 8px 10px;
+    padding: @selectionItemPadding;
 
     &.not-selectable {
-      background-color: #f8f8f8;
-      color: #999;
+      //background-color: #f8f8f8;
+      color: @disabledTextColor;
       cursor: default;
-      font-style: oblique;
-      text-shadow: 0px 1px 0px #fff;
+      //text-shadow: 0px 1px 0px #fff;
     }
   }
 
@@ -199,10 +182,6 @@
 
     .control {
       padding: 0 @horizontalPadding;
-
-      .placeholder {
-        padding: @padding;
-      }
     }
 
     .reset {
@@ -238,6 +217,42 @@
         padding: 2px 5px 4px;
         vertical-align: top;
       }
+    }
+  }
+
+  &.mini .control {
+    font-size: @relativeMini;
+  }
+
+  &.small .control {
+    font-size: @relativeSmall;
+  }
+
+  &.large .control {
+    font-size: @relativeLarge;
+  }
+
+  &.big .control {
+    font-size: @relativeBig;
+  }
+
+  &.huge .control {
+    font-size: @relativeHuge;
+  }
+
+  &.massive .control {
+    font-size: @relativeMassive;
+  }
+
+  &.basic {
+    .arrow {
+      display: none;
+    }
+  }
+
+  &.relative-dropdown {
+    .dropdown {
+      position: relative;
     }
   }
 }

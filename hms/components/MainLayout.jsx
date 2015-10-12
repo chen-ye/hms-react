@@ -1,25 +1,23 @@
 MainLayout = React.createClass({
-  render() {
-    return (<div>
-              <header>
-                This is our header
-              </header>
-              <main>
-                {this.props.content()}
-              </main>
-              <footer>
-                This is our footer
-              </footer>
-            </div>);
-  }
-});
+  //
+  // // This mixin makes the getMeteorData method work
+  // mixins: [ReactMeteorData],
+  //
+  // // Loads items from the Tasks collection and puts them on this.data.tasks
+  // getMeteorData() {
+  //   return {
+  //     currentUser: Meteor.user()
+  //   };
+  // },
 
-Home = React.createClass({
-  render () {
+  render() {
     return (
       <div>
-        <h1>This is the home page</h1>
-        /* Rendering of material-ui components will work here */
+        <TopNav />
+        <main>
+          {this.props.content()}
+        </main>
+        <footer></footer>
       </div>
     );
   }
