@@ -50,6 +50,7 @@ MissingDetailsForm = React.createClass({
   },
 
   handleSubmit(event) {
+    event.preventDefault();
     this.setState(this.calculateInitialState(this.props.user, this.props.requiredDetails));
   },
 
@@ -60,7 +61,6 @@ MissingDetailsForm = React.createClass({
   },
 
   render() {
-    console.log("rerendering");
     return (
         this.state.initialNumMissing > 0 &&
         <form id="missingDetailsForm" className="ui form" onSubmit={this.handleSubmit} ref="form" key={this.props.user._id} onChange={this.refreshMarginalState}>

@@ -8,7 +8,7 @@ Checkin = React.createClass({
       users: Meteor.users
         .find({})
         .fetch(),
-      selectedUser: Meteor.users.findOne(this.state.selectedUserID)
+      selectedUser: (!!this.state.selectedUserID ? Meteor.users.findOne(this.state.selectedUserID) : undefined)
     };
   },
 
@@ -49,7 +49,7 @@ Checkin = React.createClass({
         <div className="ui basic segment">
           <div>
             <ReactSelectize.SimpleSelect
-                className = "massive basic relative-dropdown"
+                className = "massive basic relative-dropdown sliding"
                 groups = {groups}
                 groupsAsColumns = {true}
                 options = {this.data.users.map((user) => {
@@ -67,13 +67,14 @@ Checkin = React.createClass({
                 placeholder = "Search for hackers, volunteers, or reps"
             />
           {!!selectedUser &&
-            <HackerStatus className="massive superimposed" hackerStatus={self.data.selectedUser.hackerStatus}/>
+            <HackerStatus className="massive superimposed" hackerStatus={this.data.selectedUser.hackerStatus}/>
           }
         </div>
       </div>
       {!!selectedUser &&
         <div className="ui basic segment">
-          <MissingDetailsForm user={self.data.selectedUser} requiredDetails={requiredDetails}></MissingDetailsForm>
+          <MissingDetailsForm user={this.data.selectedUser} requiredDetails={requiredDetails}/>
+          <CheckinReminders user={this.data.selectedUser}/>
         </div>
       }
       </div>
