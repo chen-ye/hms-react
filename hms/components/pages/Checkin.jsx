@@ -60,7 +60,7 @@ Checkin = React.createClass({
                     };
                 })}
                 onValueChange = {(selection, callback) => {
-                  self.setState({selectedUserID: selection.value}, callback);
+                  self.setState({selectedUserID: (!!selection ? selection.value : undefined)}, callback);
                 }
 
                 }
