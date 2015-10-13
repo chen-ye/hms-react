@@ -15,7 +15,9 @@ MainLayout = React.createClass({
       <div>
         <TopNav />
         <main>
-          {this.props.content()}
+          {
+            (_.isFunction(this.props.content)) && this.props.content()
+          }
         </main>
         <footer></footer>
       </div>

@@ -48,15 +48,14 @@ RegistrationForm = React.createClass({
       placeholder: ""
     };
     $.extend(defaults, options);
-    return this.renderField(id, ( < input type = {
-      settings.type
-    }
-    placeholder = {
-      settings.placeholder
-    }
-    ref = {
-      id
-    } />), settings);
+    return this.renderField(id,
+      (
+        <input
+          type={ settings.type }
+          placeholder={ settings.placeholder }
+          ref={ id }
+        />
+      ), settings);
   },
   render() {
     return (

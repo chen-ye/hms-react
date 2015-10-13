@@ -10,18 +10,6 @@ FlowRouter.route('/', {
   }
 });
 
-FlowRouter.route('/dashboard', {
-  name: 'dashboard',
-  action: function(params) {
-    /* The key 'content' is now a function */
-    ReactLayout.render(MainLayout, {
-      content() {
-        return <Home />;
-      }
-    });
-  }
-});
-
 FlowRouter.route('/dashboard/event/checkin', {
   name: 'checkin',
   action: function(params) {

@@ -30,26 +30,32 @@ TopNav = React.createClass({
               </div>
             </div>
             <a href="/dashboard/metrics" className="item">Metrics</a>
+            {
+              function() {
+                if(!!Meteor.user()) {
+                  return  <a href="#" className="ui right floated dropdown item">
+                            {Meteor.user().profile.name}
+                            <i className="dropdown icon"></i>
+                            <div className="menu">
+                              <div className="item">Link Item</div>
+                              <div className="item">Link Item</div>
+                              <div className="divider"></div>
+                              <div className="header">Header Item</div>
+                              <div className="item">
+                                <i className="dropdown icon"></i>
+                                Sub Menu
+                                <div className="menu">
+                                  <div className="item">Link Item</div>
+                                  <div className="item">Link Item</div>
+                                </div>
+                              </div>
+                              <div className="item">Link Item</div>
+                            </div>
+                          </a>;
+                }
+              }()
+            }
 
-            <a href="#" className="ui right floated dropdown item">
-              {Meteor.user().profile.name}
-              <i className="dropdown icon"></i>
-              <div className="menu">
-                <div className="item">Link Item</div>
-                <div className="item">Link Item</div>
-                <div className="divider"></div>
-                <div className="header">Header Item</div>
-                <div className="item">
-                  <i className="dropdown icon"></i>
-                  Sub Menu
-                  <div className="menu">
-                    <div className="item">Link Item</div>
-                    <div className="item">Link Item</div>
-                  </div>
-                </div>
-                <div className="item">Link Item</div>
-              </div>
-            </a>
           </div>
         </nav>
     );
