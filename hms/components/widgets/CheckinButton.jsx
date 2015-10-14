@@ -8,11 +8,7 @@ CheckinButton = React.createClass({
 
   handleSubmit(event) {
     event.preventDefault();
-    Meteor.users.update(this.props.user._id, {
-      $set: {
-        "hackerStatus.checked_in": true
-      }
-    });
+    Meteor.call("checkIn", this.props.user._id);
   },
 
   render() {

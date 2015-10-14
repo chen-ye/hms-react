@@ -19,9 +19,9 @@ Checkin = React.createClass({
   },
 
   render() {
-    var self = this,
-        selectedUser = this.data.selectedUser,
-        groups = [{
+    const self = this;
+    const selectedUser = this.data.selectedUser;
+    var   groups = [{
             groupId: "hacker",
             title: "Hackers"
         }, {
