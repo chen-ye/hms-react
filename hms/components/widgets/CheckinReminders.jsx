@@ -3,7 +3,8 @@ CheckinReminders = React.createClass({
   propTypes: {
       // This component gets the task to display through a React prop.
       // We can use propTypes to indicate it is required
-      user: React.PropTypes.object.isRequired
+      user: React.PropTypes.object.isRequired,
+      active: React.PropTypes.bool
   },
 
   handleSubmit(event) {
@@ -14,6 +15,7 @@ CheckinReminders = React.createClass({
   render() {
     return (
         <form id="checkinReminders" className="ui form" key={this.props.user._id} onSubmit={this.handleSubmit}>
+          <div className="ui inverted dimmer active" ref="dimmer"></div>
           <h3 className="ui header">Give t-shirt and swag bag:</h3>
 
           <div className="field">
@@ -32,6 +34,27 @@ CheckinReminders = React.createClass({
 
         </form>
     );
+  },
+  componentDidMount() {
+    var $dimmerNode = $(this.refs.dimmer.getDOMNode());
+    $dimmerNode.dimmer({
+      closable: false
+    });
+    if (!this.props.active) {
+      $dimmerNode.dimmer('show');
+    } else {
+      $dimmerNode.dimmer('hide');
+    }
+  },
+  componentDidUpdate(prevProps) {
+    if (prevProps.active !== this.props.active) {
+      var $dimmerNode = $(this.refs.dimmer.getDOMNode());
+      if (!this.props.active) {
+        $dimmerNode.dimmer('show');
+      } else {
+        $dimmerNode.dimmer('hide');
+      }
+    }
   }
 
 });

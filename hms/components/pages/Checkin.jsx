@@ -6,7 +6,9 @@ Checkin = React.createClass({
   getMeteorData() {
     return {
       users: Meteor.users
-        .find({})
+        .find({
+          "hackerStatus.checked_in": false
+        })
         .fetch(),
       selectedUser: (!!this.state.selectedUserID ? Meteor.users.findOne(this.state.selectedUserID) : undefined)
     };
@@ -14,13 +16,15 @@ Checkin = React.createClass({
 
   getInitialState() {
     return {
-      selectedUserID: undefined
+      selectedUserID: undefined,
+      missing: false
     };
   },
 
   render() {
     const self = this;
     const selectedUser = this.data.selectedUser;
+    const validRoles = ["rep", "volunteer", "hacker"];
     var   groups = [{
             groupId: "hacker",
             title: "Hackers"
@@ -53,11 +57,12 @@ Checkin = React.createClass({
                 groups = {groups}
                 groupsAsColumns = {true}
                 options = {this.data.users.map((user) => {
-                    return {
-                        groupId: user.roles[0],
-                        label: user.profile.name,
-                        value: user._id
-                    };
+                  var userValidRoles = _.intersection(validRoles, user.roles);
+                  return {
+                      groupId: (userValidRoles.length > 0) ? userValidRoles[0] : "",
+                      label: user.profile.name,
+                      value: user._id
+                  };
                 })}
                 onValueChange = {(selection, callback) => {
                   self.setState({selectedUserID: (!!selection ? selection.value : undefined)}, callback);
@@ -73,8 +78,13 @@ Checkin = React.createClass({
       </div>
       {!!selectedUser &&
         <div className="ui basic segment">
-          <MissingDetailsForm user={this.data.selectedUser} requiredDetails={requiredDetails}/>
-          <CheckinReminders user={this.data.selectedUser}/>
+          <MissingDetailsForm
+            user={this.data.selectedUser}
+            requiredDetails={requiredDetails}
+            onMissingChange={(initialMissing, currentMissing) => {
+              self.setState({missing: (currentMissing === 0 ? false : true)});
+            }}/>
+          <CheckinReminders user={this.data.selectedUser} active={!this.state.missing}/>
         </div>
       }
       </div>

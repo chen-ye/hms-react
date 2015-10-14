@@ -4,7 +4,8 @@ MissingDetailsForm = React.createClass({
       // This component gets the task to display through a React prop.
       // We can use propTypes to indicate it is required
       user: React.PropTypes.object.isRequired,
-      requiredDetails: React.PropTypes.object.isRequired
+      requiredDetails: React.PropTypes.object.isRequired,
+      onMissingChange: React.PropTypes.func
   },
 
   checkMissing(target, mask, missing) {
@@ -24,6 +25,7 @@ MissingDetailsForm = React.createClass({
   calculateMarginalState(user, requiredDetails) {
     var missing = {};
     var numMissing = this.checkMissing(user, requiredDetails, missing);
+
     return {
       currentMissing: missing,
       currentNumMissing: numMissing
@@ -57,6 +59,9 @@ MissingDetailsForm = React.createClass({
   componentWillReceiveProps(nextProps) {
     if (nextProps.user._id !== this.props.user._id) {
       this.setState(this.calculateInitialState(nextProps.user, nextProps.requiredDetails));
+      if (!!this.props.onRefreshState) {
+        this.props.onRefreshState(this.state);
+      }
     }
   },
 
@@ -64,8 +69,10 @@ MissingDetailsForm = React.createClass({
     return (
         this.state.initialNumMissing > 0 &&
         <form id="missingDetailsForm" className="ui form" onSubmit={this.handleSubmit} ref="form" key={this.props.user._id} onChange={this.refreshMarginalState}>
-
+          {
+            this.state.currentNumMissing !== 0 &&
             <h3 className="ui header">Some required information is missing:</h3>
+          }
           {
             this.state.initialMissing.profile.phone &&
             <div className="two fields">
@@ -81,10 +88,6 @@ MissingDetailsForm = React.createClass({
               </div>
             </div>
           }
-          {
-            this.state.currentNumMissing === 0 &&
-            <button className="ui primary button" type="submit">Continue</button>
-          }
         </form>
     );
   },
@@ -93,11 +96,19 @@ MissingDetailsForm = React.createClass({
       var formNode = this.refs.form.getDOMNode();
       $(formNode).find(".ui.dropdown").dropdown();
     }
+    if(!!this.props.onMissingChange) {
+      this.props.onMissingChange(this.state.initialNumMissing, this.state.currentNumMissing);
+    }
   },
-  componentDidUpdate() {
+  componentDidUpdate( prevProps, prevState ) {
     if(this.state.initialNumMissing > 0) {
       var formNode = this.refs.form.getDOMNode();
       $(formNode).find(".ui.dropdown").dropdown();
+    }
+    if(this.state.currentNumMissing !== prevState.currentNumMissing || this.state.initialNumMissing !== prevState.initialNumMissing) {
+      if(!!this.props.onMissingChange) {
+        this.props.onMissingChange(this.state.initialNumMissing, this.state.currentNumMissing);
+      }
     }
   }
 
