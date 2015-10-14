@@ -2,6 +2,12 @@ Accounts
   .onCreateUser(function(options, user) {
     // Semantics for adding things to users after the user document has been inserted
     var userId = user._id = Random.id();
+    var rolesToAdd = ['hacker'];
+
+    if(user.emails[0].address === "admin@hms.com") {
+      rolesToAdd.push('admin');
+    }
+
     var handle = Meteor.users
       .find({
         _id: userId
@@ -12,7 +18,7 @@ Accounts
       })
       .observe({
         added: function() {
-          Roles.addUsersToRoles(userId, ['hacker']);
+          Roles.addUsersToRoles(userId, rolesToAdd);
           handle.stop();
           handle = null;
         }
