@@ -1,5 +1,6 @@
 {
   "react-selectize": "0.2.6",
   "react-motion": "0.3.0",
+  "react-maskedinput-plus": "0.0.13",
   "externalify": "0.1.0"
 }

@@ -67,6 +67,7 @@ MissingDetailsForm = React.createClass({
 
   render() {
     var self = this;
+    const phonePattern = '(111) 111-1111';
     return (
         this.state.initialNumMissing > 0 && !this.props.user.hackerStatus.checked_in &&
         <form id="missingDetailsForm" className="ui form" onSubmit={this.handleSubmit} ref="form" key={this.props.user._id} onChange={this.refreshMarginalState}>
@@ -79,33 +80,27 @@ MissingDetailsForm = React.createClass({
             <div className="two fields">
               <div className="field">
                 <label>Cell Number</label>
-                <input
+                <MaskedInput
                   type="tel"
-                  placeholder="+1(123)456-7890"
-                  name="phone" ref={ (ref) => {
-                    if (!!ref) {
-                      $(ref.getDOMNode()).inputmask("phone", {
-                        url:"/jquery.inputmask/phone-codes/phone-codes.js",
-                        greedy: false,
-                        showMaskOnHover: false,
-                        oncomplete(){
-                          Meteor.users.update(self.props.user._id, {
-                            $set: {
-                              "profile.phone": ref.getDOMNode().value
-                            }
-                          });
-                        }
-                    });
-                    }
-                  }}
+                  name="phone"
                   value={this.props.user.profile.phone}
                   onChange={(event) => {
-                    Meteor.users.update(this.props.user._id, {
+                    var modifier = (event.target.value === "") ?
+                    {
+                      $unset: {
+                        "profile.phone": ""
+                      }
+                    } :
+                    {
                       $set: {
                         "profile.phone": event.target.value
                       }
+                    };
+                    Meteor.users.update(this.props.user._id, modifier, {}, function(error) {
+                      self.refreshMarginalState();
                     });
                   }}
+                  pattern={phonePattern}
                   />
               </div>
             </div>
@@ -123,15 +118,17 @@ MissingDetailsForm = React.createClass({
       this.props.onMissingChange(this.state.initialNumMissing, this.state.currentNumMissing);
     }
   },
+  componentWillUpdate( nextProps, nextState ) {
+    if(this.state.currentNumMissing !== nextState.currentNumMissing || this.state.initialNumMissing !== nextState.initialNumMissing) {
+      if(!!this.props.onMissingChange) {
+        this.props.onMissingChange(nextState.initialNumMissing, nextState.currentNumMissing);
+      }
+    }
+  },
   componentDidUpdate( prevProps, prevState ) {
     if(this.state.initialNumMissing > 0) {
       var formNode = this.refs.form.getDOMNode();
       $(formNode).find(".ui.dropdown").dropdown();
-    }
-    if(this.state.currentNumMissing !== prevState.currentNumMissing || this.state.initialNumMissing !== prevState.initialNumMissing) {
-      if(!!this.props.onMissingChange) {
-        this.props.onMissingChange(this.state.initialNumMissing, this.state.currentNumMissing);
-      }
     }
   }
 

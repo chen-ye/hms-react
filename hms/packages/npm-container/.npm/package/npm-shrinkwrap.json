@@ -216,6 +216,62 @@
         }
       }
     },
+    "react-maskedinput-plus": {
+      "version": "0.0.13",
+      "dependencies": {
+        "babel-runtime": {
+          "version": "5.8.25",
+          "dependencies": {
+            "core-js": {
+              "version": "1.2.1"
+            }
+          }
+        },
+        "debug": {
+          "version": "2.2.0",
+          "dependencies": {
+            "ms": {
+              "version": "0.7.1"
+            }
+          }
+        },
+        "inputmask-core": {
+          "version": "2.1.1"
+        },
+        "react": {
+          "version": "0.13.3",
+          "dependencies": {
+            "envify": {
+              "version": "3.4.0",
+              "dependencies": {
+                "through": {
+                  "version": "2.3.8"
+                },
+                "jstransform": {
+                  "version": "10.1.0",
+                  "dependencies": {
+                    "base62": {
+                      "version": "0.1.1"
+                    },
+                    "esprima-fb": {
+                      "version": "13001.1001.0-dev-harmony-fb"
+                    },
+                    "source-map": {
+                      "version": "0.1.31",
+                      "dependencies": {
+                        "amdefine": {
+                          "version": "1.0.0"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "react-motion": {
       "version": "0.3.0",
       "dependencies": {
