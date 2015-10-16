@@ -126,7 +126,7 @@ MissingDetailsForm = React.createClass({
     }
   },
   componentDidUpdate( prevProps, prevState ) {
-    if(this.state.initialNumMissing > 0) {
+    if( !!this.refs.form ) {
       var formNode = this.refs.form.getDOMNode();
       $(formNode).find(".ui.dropdown").dropdown();
     }
