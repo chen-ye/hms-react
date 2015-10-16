@@ -4,18 +4,23 @@ CheckinReminders = React.createClass({
       // This component gets the task to display through a React prop.
       // We can use propTypes to indicate it is required
       user: React.PropTypes.object.isRequired,
-      active: React.PropTypes.bool
+      active: React.PropTypes.bool,
+      onCheckin: React.PropTypes.func
   },
 
   handleSubmit(event) {
     event.preventDefault();
     Meteor.call("checkIn", this.props.user._id);
+    if(!!this.props.onCheckin) {
+      this.props.onCheckin(this.props.user);
+    }
   },
 
   render() {
     return (
+        !this.props.user.hackerStatus.checked_in &&
         <form id="checkinReminders" className="ui form" key={this.props.user._id} onSubmit={this.handleSubmit}>
-          <div className="ui inverted dimmer active" ref="dimmer"></div>
+          <div className="ui inverted dimmer" ref="dimmer"></div>
           <h3 className="ui header">Give t-shirt and swag bag:</h3>
 
           <div className="field">
@@ -40,19 +45,19 @@ CheckinReminders = React.createClass({
     $dimmerNode.dimmer({
       closable: false
     });
-    if (!this.props.active) {
-      $dimmerNode.dimmer('show');
-    } else {
+    if (this.props.active) {
       $dimmerNode.dimmer('hide');
+    } else {
+      $dimmerNode.dimmer('show');
     }
   },
   componentDidUpdate(prevProps) {
     if (prevProps.active !== this.props.active) {
       var $dimmerNode = $(this.refs.dimmer.getDOMNode());
-      if (!this.props.active) {
-        $dimmerNode.dimmer('show');
-      } else {
+      if (this.props.active) {
         $dimmerNode.dimmer('hide');
+      } else {
+        $dimmerNode.dimmer('show');
       }
     }
   }

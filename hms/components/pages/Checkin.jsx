@@ -53,6 +53,7 @@ Checkin = React.createClass({
         <div className="ui basic segment">
           <div>
             <ReactSelectize.SimpleSelect
+                ref = "hackerSelect"
                 className = "massive basic relative-dropdown sliding"
                 groups = {groups}
                 groupsAsColumns = {true}
@@ -83,8 +84,15 @@ Checkin = React.createClass({
             requiredDetails={requiredDetails}
             onMissingChange={(initialMissing, currentMissing) => {
               self.setState({missing: (currentMissing === 0 ? false : true)});
-            }}/>
-          <CheckinReminders user={this.data.selectedUser} active={!this.state.missing}/>
+            }}
+            />
+          <CheckinReminders
+            user={this.data.selectedUser}
+            active={!this.state.missing}
+            onCheckin={() => {
+              self.refs.hackerSelect.focus();
+            }}
+            />
         </div>
       }
       </div>

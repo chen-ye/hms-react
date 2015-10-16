@@ -66,25 +66,47 @@ MissingDetailsForm = React.createClass({
   },
 
   render() {
+    var self = this;
     return (
-        this.state.initialNumMissing > 0 &&
+        this.state.initialNumMissing > 0 && !this.props.user.hackerStatus.checked_in &&
         <form id="missingDetailsForm" className="ui form" onSubmit={this.handleSubmit} ref="form" key={this.props.user._id} onChange={this.refreshMarginalState}>
           {
             this.state.currentNumMissing !== 0 &&
-            <h3 className="ui header">Some required information is missing:</h3>
+            <h3 className="ui header">Ask for required missing information:</h3>
           }
           {
             this.state.initialMissing.profile.phone &&
             <div className="two fields">
               <div className="field">
                 <label>Cell Number</label>
-                <input type="tel" placeholder="(123) 456-7890" name="phone" value={this.props.user.profile.phone} onChange={(event) => {
+                <input
+                  type="tel"
+                  placeholder="+1(123)456-7890"
+                  name="phone" ref={ (ref) => {
+                    if (!!ref) {
+                      $(ref.getDOMNode()).inputmask("phone", {
+                        url:"/jquery.inputmask/phone-codes/phone-codes.js",
+                        greedy: false,
+                        showMaskOnHover: false,
+                        oncomplete(){
+                          Meteor.users.update(self.props.user._id, {
+                            $set: {
+                              "profile.phone": ref.getDOMNode().value
+                            }
+                          });
+                        }
+                    });
+                    }
+                  }}
+                  value={this.props.user.profile.phone}
+                  onChange={(event) => {
                     Meteor.users.update(this.props.user._id, {
                       $set: {
                         "profile.phone": event.target.value
                       }
                     });
-                  }}/>
+                  }}
+                  />
               </div>
             </div>
           }
@@ -92,6 +114,7 @@ MissingDetailsForm = React.createClass({
     );
   },
   componentDidMount() {
+
     if(this.state.initialNumMissing > 0) {
       var formNode = this.refs.form.getDOMNode();
       $(formNode).find(".ui.dropdown").dropdown();
