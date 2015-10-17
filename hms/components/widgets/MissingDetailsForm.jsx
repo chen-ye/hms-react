@@ -59,9 +59,6 @@ MissingDetailsForm = React.createClass({
   componentWillReceiveProps(nextProps) {
     if (nextProps.user._id !== this.props.user._id) {
       this.setState(this.calculateInitialState(nextProps.user, nextProps.requiredDetails));
-      if (!!this.props.onRefreshState) {
-        this.props.onRefreshState(this.state);
-      }
     }
   },
 
@@ -129,6 +126,9 @@ MissingDetailsForm = React.createClass({
     if( !!this.refs.form ) {
       var formNode = this.refs.form.getDOMNode();
       $(formNode).find(".ui.dropdown").dropdown();
+      if(this.state.initialNumMissing !== prevState.initialNumMissing) {
+        $(formNode).find("input")[0].focus();
+      }
     }
   }
 

@@ -8,7 +8,7 @@ CheckinButton = React.createClass({
 
   handleSubmit(event) {
     event.preventDefault();
-    Meteor.call("checkIn", this.props.user._id);
+    Meteor.call("checkInUser", this.props.user._id);
   },
 
   render() {

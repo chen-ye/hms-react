@@ -6,5 +6,6 @@
         "react": "React.require"
       }
     }
-  }
+  },
+  "noParse":["get-vendor-prefix.js"]
 }

@@ -5,7 +5,7 @@ Meteor.methods({
    * @method updateUser
    * @param {String} targetUserId _id of user to check in
    */
-  checkIn(targetUserId) {
+  checkInUser(targetUserId) {
     const loggedInUser = Meteor.user();
 
     if (Roles.userIsInRole(loggedInUser, [
@@ -157,6 +157,22 @@ Meteor.methods({
     const loggedInUser = Meteor.user();
     if (Roles.userIsInRole(loggedInUser, ['admin'])) {
       Roles.addUsersToRoles(targetUserId, roles);
+    } else {
+      throw new Meteor.Error(403, "Not authorized to add arbitrary roles");
+    }
+  },
+  resetAllHackerStatus() {
+    const loggedInUser = Meteor.user();
+    if (Roles.userIsInRole(loggedInUser, ['admin'])) {
+      Meteor.users.update({}, {
+        $set: {
+          hackerStatus: {
+            accept_status: "pending",
+            checked_in: false,
+            project_submitted: false
+          }
+        }
+      }, { multi: true });
     } else {
       throw new Meteor.Error(403, "Not authorized to add arbitrary roles");
     }

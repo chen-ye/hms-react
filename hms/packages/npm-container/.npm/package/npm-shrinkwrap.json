@@ -272,6 +272,9 @@
         }
       }
     },
+    "react-measure": {
+      "version": "0.1.3"
+    },
     "react-motion": {
       "version": "0.3.0",
       "dependencies": {
@@ -280,6 +283,43 @@
         },
         "raf": {
           "version": "3.1.0"
+        }
+      }
+    },
+    "react-motion-ui-pack": {
+      "version": "https://github.com/chen-ye/react-motion-ui-pack-meteor/tarball/dd3585f9a7cef8da071bf7140bd067f0e173c3cf",
+      "dependencies": {
+        "react": {
+          "version": "0.13.3",
+          "dependencies": {
+            "envify": {
+              "version": "3.4.0",
+              "dependencies": {
+                "through": {
+                  "version": "2.3.8"
+                },
+                "jstransform": {
+                  "version": "10.1.0",
+                  "dependencies": {
+                    "base62": {
+                      "version": "0.1.1"
+                    },
+                    "esprima-fb": {
+                      "version": "13001.1001.0-dev-harmony-fb"
+                    },
+                    "source-map": {
+                      "version": "0.1.31",
+                      "dependencies": {
+                        "amdefine": {
+                          "version": "1.0.0"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     },
@@ -323,10 +363,18 @@
               }
             },
             "fbjs": {
-              "version": "0.3.1",
+              "version": "0.3.2",
               "dependencies": {
                 "core-js": {
                   "version": "1.2.1"
+                },
+                "loose-envify": {
+                  "version": "1.0.0",
+                  "dependencies": {
+                    "js-tokens": {
+                      "version": "1.0.1"
+                    }
+                  }
                 },
                 "promise": {
                   "version": "7.0.4",
@@ -395,6 +443,118 @@
                           }
                         }
                       }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "reactify": {
+      "version": "1.1.1",
+      "dependencies": {
+        "through": {
+          "version": "2.3.8"
+        },
+        "react-tools": {
+          "version": "0.13.3",
+          "dependencies": {
+            "commoner": {
+              "version": "0.10.3",
+              "dependencies": {
+                "q": {
+                  "version": "1.1.2"
+                },
+                "recast": {
+                  "version": "0.10.33",
+                  "dependencies": {
+                    "esprima-fb": {
+                      "version": "15001.1001.0-dev-harmony-fb"
+                    },
+                    "source-map": {
+                      "version": "0.5.1"
+                    },
+                    "ast-types": {
+                      "version": "0.8.12"
+                    }
+                  }
+                },
+                "commander": {
+                  "version": "2.5.1"
+                },
+                "graceful-fs": {
+                  "version": "3.0.8"
+                },
+                "glob": {
+                  "version": "4.2.2",
+                  "dependencies": {
+                    "inflight": {
+                      "version": "1.0.4",
+                      "dependencies": {
+                        "wrappy": {
+                          "version": "1.0.1"
+                        }
+                      }
+                    },
+                    "inherits": {
+                      "version": "2.0.1"
+                    },
+                    "minimatch": {
+                      "version": "1.0.0",
+                      "dependencies": {
+                        "lru-cache": {
+                          "version": "2.7.0"
+                        },
+                        "sigmund": {
+                          "version": "1.0.1"
+                        }
+                      }
+                    },
+                    "once": {
+                      "version": "1.3.2",
+                      "dependencies": {
+                        "wrappy": {
+                          "version": "1.0.1"
+                        }
+                      }
+                    }
+                  }
+                },
+                "mkdirp": {
+                  "version": "0.5.1",
+                  "dependencies": {
+                    "minimist": {
+                      "version": "0.0.8"
+                    }
+                  }
+                },
+                "private": {
+                  "version": "0.1.6"
+                },
+                "install": {
+                  "version": "0.1.8"
+                },
+                "iconv-lite": {
+                  "version": "0.4.13"
+                }
+              }
+            },
+            "jstransform": {
+              "version": "10.1.0",
+              "dependencies": {
+                "base62": {
+                  "version": "0.1.1"
+                },
+                "esprima-fb": {
+                  "version": "13001.1001.0-dev-harmony-fb"
+                },
+                "source-map": {
+                  "version": "0.1.31",
+                  "dependencies": {
+                    "amdefine": {
+                      "version": "1.0.0"
                     }
                   }
                 }

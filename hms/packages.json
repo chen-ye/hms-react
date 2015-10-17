@@ -1,6 +1,9 @@
 {
   "react-selectize": "0.2.6",
   "react-motion": "0.3.0",
+  "react-motion-ui-pack": "https://github.com/chen-ye/react-motion-ui-pack-meteor/tarball/dd3585f9a7cef8da071bf7140bd067f0e173c3cf",
+  "react-measure": "0.1.3",
   "react-maskedinput-plus": "0.0.13",
-  "externalify": "0.1.0"
+  "externalify": "0.1.0",
+  "reactify": "1.1.1"
 }
