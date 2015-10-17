@@ -10,17 +10,23 @@
   text-transform: uppercase !important;
 }
 
-#checkin .label.superimposed {
-  position: absolute;
-  top: 1.2rem;
-  right: 1rem;
-  z-index: 10;
-}
-
-#checkin #missingDetailsForm ~ * {
-  padding-top: 2rem !important;
-}
-
 .ui.collapsible {
   overflow: hidden;
+}
+
+// PAGES
+
+#checkin {
+
+  .label.superimposed {
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    z-index: 10;
+  }
+
+  #missingDetailsForm {
+    margin: 1em 0;
+  }
+  
 }

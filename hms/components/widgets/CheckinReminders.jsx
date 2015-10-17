@@ -16,37 +16,12 @@ CheckinReminders = React.createClass({
     }
   },
 
-  getDefaultStyles() {
-
-  },
-
-  getStyles() {
-    let configs = {};
-    configs[this.props.user._id] = {
-      height: spring()
-    };
-    return configs;
-  },
-
-  willEnter(key) {
-    return {
-      opacity: spring(0) // start at 0, gradually expand
-      //text: this.state.blocks[key], // this is really just carried around so
-      // that interpolated values can still access the text when the key is gone
-      // from actual `styles`
-    };
-  },
-
-  willLeave(key, style) {
-    return {
-      opacity: spring(0), // make opacity reach 0, after which we can kill the key
-      text: style.text,
-    };
-  },
-
   render() {
+    var springParams = [415,28];
+
     return (
       <Transition
+        measure={true}
         onlyChild={true}
         enter={{
           height: 'auto',
@@ -55,28 +30,31 @@ CheckinReminders = React.createClass({
         leave={{
           height: 0,
           opacity: 0
-        }}>
+        }}
+        springParams={springParams}>
         {
-          !this.props.user.hackerStatus.checked_in &&
-          <form id="checkinReminders" className="ui form collapsible" key={this.props.user._id} onSubmit={this.handleSubmit}>
-            <div className="ui inverted dimmer" ref="dimmer"></div>
-            <h3 className="ui header">Give t-shirt and swag bag:</h3>
+          !!this.props.user && !this.props.user.hackerStatus.checked_in &&
+          <div className="ui collapsible container">
+            <form id="checkinReminders" className="ui form" onSubmit={this.handleSubmit}>
+              <div className="ui inverted dimmer" ref="dimmer"></div>
+              <h3 className="ui header">Give t-shirt and swag bag:</h3>
 
-            <div className="field">
-              <label>T-Shirt:</label>
-              <div className="ui large label">
-                {!!this.props.user.profile.shirt_type ? this.props.user.profile.shirt_type : "Unknown Type"}
+              <div className="field">
+                <label>T-Shirt:</label>
+                <div className="ui large label">
+                  {!!this.props.user.profile.shirt_type ? this.props.user.profile.shirt_type : "Unknown Type"}
+                </div>
+                <div className="ui large label">
+                  {!!this.props.user.profile.shirt_type ? this.props.user.profile.shirt_size : "Unknown Size"}
+                </div>
               </div>
-              <div className="ui large label">
-                {!!this.props.user.profile.shirt_type ? this.props.user.profile.shirt_size : "Unknown Size"}
-              </div>
-            </div>
 
-            <h3 className="ui header">Remind this hacker that travel reciepts are due on 1.2.2016</h3>
+              <h3 className="ui header">Remind this hacker that travel reciepts are due on 1.2.2016</h3>
 
-            <button className="ui primary big button" type="submit">Check In</button>
+              <button className="ui primary big button" type="submit">Check In</button>
 
-          </form>
+            </form>
+          </div>
         }
       </Transition>
     );
@@ -88,8 +66,10 @@ CheckinReminders = React.createClass({
         closable: false
       });
       if (this.props.active) {
+        console.log("hiding dimmer");
         $dimmerNode.dimmer('hide');
       } else {
+        console.log("showing dimmer");
         $dimmerNode.dimmer('show');
       }
     }
@@ -102,8 +82,10 @@ CheckinReminders = React.createClass({
         closable: false
       });
       if (this.props.active) {
+        console.log("hiding dimmer");
         $dimmerNode.dimmer('hide');
       } else {
+        console.log("showing dimmer");
         $dimmerNode.dimmer('show');
       }
     }

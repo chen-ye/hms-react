@@ -22,6 +22,7 @@ Checkin = React.createClass({
   },
 
   render() {
+    var springParams = [170,26];
     const self = this;
     const selectedUser = this.data.selectedUser;
     const validRoles = ["rep", "volunteer", "hacker"];
@@ -77,24 +78,24 @@ Checkin = React.createClass({
           }
         </div>
       </div>
-      {!!selectedUser &&
-        <div className="ui basic segment">
-          <MissingDetailsForm
-            user={this.data.selectedUser}
-            requiredDetails={requiredDetails}
-            onMissingChange={(initialMissing, currentMissing) => {
-              self.setState({missing: (currentMissing === 0 ? false : true)});
-            }}
-            />
-          <CheckinReminders
-            user={this.data.selectedUser}
-            active={!this.state.missing}
-            onCheckin={() => {
-              self.refs.hackerSelect.focus();
-            }}
-            />
-        </div>
-      }
+        {!!selectedUser &&
+          <div className="ui basic segment">
+            <MissingDetailsForm
+              user={this.data.selectedUser}
+              requiredDetails={requiredDetails}
+              onMissingChange={(initialMissing, currentMissing) => {
+                self.setState({missing: (currentMissing === 0 ? false : true)});
+              }}
+              />
+            <CheckinReminders
+              user={this.data.selectedUser}
+              active={!this.state.missing}
+              onCheckin={() => {
+                self.refs.hackerSelect.focus();
+              }}
+              />
+          </div>
+        }
       </div>
     );
   }
