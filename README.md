@@ -6,6 +6,7 @@ HMS is still in early development
 
 ### Stable
 Nothing yet!
+
 ### Functional
 - People
   - User account system
@@ -13,10 +14,12 @@ Nothing yet!
   - Roles with permissions (volunteers, hackers, organizers, mentors, admin)
 - Event
   - Check-in system
+
 ### Indev
 - Event
   - Registration
 - Debug
+
 ### Planned
 `TK`
 
@@ -31,7 +34,10 @@ Nothing yet!
 
 ## Configuration
 Hold on though, you probably want to actually *use* this thing, don't you?
+
 In order to do so, you'll need to set up an admin account in `hms-react/hms/private/config` first.  The syntax should be right in the file.  
 
 ## Contribute!  
-HMS is still in very very early development, and any help is appreciated!  Code, bugfixes, and pull requests are welcome, but I'd also love to hear organizer perspectives--what would *you* find useful to have?  [Let's chat!](https://github.com/chen-ye/hms-react/issues)
+HMS is still in very very early development, and any help is appreciated!  
+
+Code, bugfixes, and pull requests are welcome, but I'd also love to hear organizer perspectives--what would *you* find useful to have?  [Let's chat!](https://github.com/chen-ye/hms-react/issues)
