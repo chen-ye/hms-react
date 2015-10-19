@@ -188,13 +188,13 @@
           "version": "0.3.2",
           "dependencies": {
             "core-js": {
-              "version": "1.2.1"
+              "version": "1.2.2"
             },
             "loose-envify": {
-              "version": "1.0.0",
+              "version": "1.1.0",
               "dependencies": {
                 "js-tokens": {
-                  "version": "1.0.1"
+                  "version": "1.0.2"
                 }
               }
             },
