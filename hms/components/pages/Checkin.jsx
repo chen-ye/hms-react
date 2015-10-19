@@ -1,6 +1,31 @@
 Checkin = React.createClass({
-  // This mixin makes the getMeteorData method work
-  mixins: [ReactMeteorData],
+
+  mixins: [ReactMeteorData, Keybinding],
+
+  keybindingsPlatformAgnostic: true,
+  keybindingsIgnoreTextAreas: false,
+  keybindings: {
+    '⌃⇧F': 'FOCUSFIND'
+  },
+
+  keybinding(event, action) {
+    switch(action) {
+      case 'FOCUSFIND':
+        this._focusFind();
+        break;
+      default:
+        break;
+    }
+  },
+
+  componentWillMount() {
+    var self = this;
+    this._focusFind = function() {
+      if (!!self.refs.hackerSelect) {
+        self.refs.hackerSelect.focus();
+      }
+    };
+  },
 
   // Loads items from the Users collection
   getMeteorData() {
@@ -107,13 +132,22 @@ Checkin = React.createClass({
               }
               placeholder = "Search for hackers, volunteers, or reps"
           />
+          <div className="ui mini keycombo labels">
+            <div className="ui label">
+              Ctrl
+            </div>
+            <div className="ui label">
+              Shift
+            </div>
+            <div className="ui label">
+              F
+            </div>
+          </div>
           {!!this.data.selectedUser &&
             <HackerStatus className="massive superimposed" hackerStatus={this.data.selectedUser.hackerStatus}/>
           }
         </div>
-        <CheckinDetails user={this.data.selectedUser} onCheckin={ () => {
-            self.refs.hackerSelect.focus();
-        }}/>
+        <CheckinDetails user={this.data.selectedUser} onCheckin={this._focusFind}/>
       </div>
     );
   }

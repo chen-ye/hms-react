@@ -47,6 +47,7 @@ MissingDetailsForm = React.createClass({
         onSubmit={this._handleSubmit}
         ref={ (form) => this._form = form }
         key={this.props.user._id}>
+          <div className="action">
           {
             this.props.currentMissing.length !== 0 &&
             <h3 className="ui header">Ask for required information:</h3>
@@ -75,16 +76,11 @@ MissingDetailsForm = React.createClass({
                     Meteor.users.update(this.props.user._id, modifier, {});
                   }}
                   pattern={phonePattern}
-                  ref={ (phone) => {
-                    if(!!phone) {
-                      //console.log(React.findDOMNode(phone), phone, //phone._reactInternalInstance._rootNodeID);
-
-                    }
-                  }}
                   />
               </div>
             </div>
           }
+          </div>
       </form>
     );
   }

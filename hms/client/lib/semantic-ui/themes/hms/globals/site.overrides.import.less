@@ -2,16 +2,25 @@
 /*******************************
            Overrides
 *******************************/
-.ui.main.menu {
-  z-index: 100 !important;
-}
+.ui {
+  .main.menu {
+    z-index: 100 !important;
+  }
 
+  .collapsible {
+    overflow: hidden;
+  }
+
+  .keycombo.labels .ui.label {
+    text-transform: uppercase;
+    padding: 0.4em 0.4em;
+    margin-right: .3em;
+    border: none;
+    font-weight: 500;
+  }
+}
 .allcaps {
   text-transform: uppercase !important;
-}
-
-.ui.collapsible {
-  overflow: hidden;
 }
 
 // PAGES
@@ -28,5 +37,9 @@
   #missingDetailsForm {
     margin: 1em 0;
   }
-  
+
+  .ui.form .action {
+    margin-bottom: 4em;
+  }
+
 }
