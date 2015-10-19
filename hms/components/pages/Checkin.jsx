@@ -114,7 +114,7 @@ Checkin = React.createClass({
         </div>
         <CheckinDetails user={this.data.selectedUser} onCheckin={ () => {
             self.refs.hackerSelect.focus();
-          }}/>
+        }}/>
       </div>
     );
   }

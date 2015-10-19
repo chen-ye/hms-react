@@ -39,7 +39,6 @@ CheckinDetails = React.createClass({
   },
 
   _checkMissing(missingData, user) {
-    console.log(user);
     missingArray = [];
     _.each(missingData, function(value, key) {
       if(!value.accessor(user)) {

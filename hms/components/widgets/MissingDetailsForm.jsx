@@ -19,6 +19,7 @@ MissingDetailsForm = React.createClass({
     var springParams = [415,28];
     var self = this;
     const phonePattern = '(111) 111-1111';
+    autofocusSet = false;
     return (
       <form
         id="missingDetailsForm"
@@ -29,10 +30,10 @@ MissingDetailsForm = React.createClass({
             var $formNode = $(form.getDOMNode());
             $formNode.find(".ui.dropdown").dropdown();
             $formNode.find("input")[0].focus();
+            //console.log($formNode.find("input"));
           }
         }}
-        key={this.props.user._id}
-        onChange={this.refreshMarginalState}>
+        key={this.props.user._id}>
           {
             this.props.currentMissing.length !== 0 &&
             <h3 className="ui header">Ask for required information:</h3>
@@ -43,6 +44,7 @@ MissingDetailsForm = React.createClass({
               <div className="field">
                 <label>Cell Number</label>
                 <MaskedInput
+                  autoFocus={true}
                   type="tel"
                   name="phone"
                   value={this.props.user.profile.phone}
@@ -58,9 +60,7 @@ MissingDetailsForm = React.createClass({
                         "profile.phone": event.target.value
                       }
                     };
-                    Meteor.users.update(this.props.user._id, modifier, {}, function(error) {
-                      self.refreshMarginalState();
-                    });
+                    Meteor.users.update(this.props.user._id, modifier, {});
                   }}
                   pattern={phonePattern}
                   />
