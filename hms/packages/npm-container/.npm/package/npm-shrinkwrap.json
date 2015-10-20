@@ -216,6 +216,86 @@
         }
       }
     },
+    "react-helmet": {
+      "version": "2.1.0",
+      "dependencies": {
+        "core-js": {
+          "version": "1.2.2"
+        },
+        "deep-equal": {
+          "version": "1.0.1"
+        },
+        "he": {
+          "version": "0.5.0"
+        },
+        "invariant": {
+          "version": "2.1.1",
+          "dependencies": {
+            "loose-envify": {
+              "version": "1.1.0",
+              "dependencies": {
+                "js-tokens": {
+                  "version": "1.0.2"
+                }
+              }
+            }
+          }
+        },
+        "react-side-effect": {
+          "version": "1.0.2",
+          "dependencies": {
+            "fbjs": {
+              "version": "0.1.0-alpha.10",
+              "dependencies": {
+                "promise": {
+                  "version": "7.0.4",
+                  "dependencies": {
+                    "asap": {
+                      "version": "2.0.3"
+                    }
+                  }
+                },
+                "whatwg-fetch": {
+                  "version": "0.9.0"
+                }
+              }
+            }
+          }
+        },
+        "shallowequal": {
+          "version": "0.2.2",
+          "dependencies": {
+            "lodash.keys": {
+              "version": "3.1.2",
+              "dependencies": {
+                "lodash._getnative": {
+                  "version": "3.9.1"
+                },
+                "lodash.isarguments": {
+                  "version": "3.0.4"
+                },
+                "lodash.isarray": {
+                  "version": "3.0.4"
+                }
+              }
+            }
+          }
+        },
+        "warning": {
+          "version": "2.1.0",
+          "dependencies": {
+            "loose-envify": {
+              "version": "1.1.0",
+              "dependencies": {
+                "js-tokens": {
+                  "version": "1.0.2"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "react-keybinding": {
       "version": "https://github.com/chen-ye/react-keybinding/tarball/7dd0ec3246c5100e58c13a4588bc89534684c100",
       "dependencies": {

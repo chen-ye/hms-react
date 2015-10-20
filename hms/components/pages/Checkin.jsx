@@ -110,6 +110,7 @@ Checkin = React.createClass({
 
     return (
       <div className="ui container" id="checkin">
+        <Helmet title="Check-in | HMS" />
         <div className="ui basic segment">
           <ReactSelectize.SimpleSelect
               ref = "hackerSelect"

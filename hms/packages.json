@@ -5,6 +5,7 @@
   "react-measure": "0.1.3",
   "react-maskedinput-plus": "0.0.13",
   "react-keybinding": "https://github.com/chen-ye/react-keybinding/tarball/7dd0ec3246c5100e58c13a4588bc89534684c100",
+  "react-helmet": "2.1.0",
   "externalify": "0.1.0",
   "reactify": "1.1.1"
 }

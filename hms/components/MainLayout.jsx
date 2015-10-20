@@ -13,6 +13,7 @@ MainLayout = React.createClass({
   render() {
     return (
       <div>
+        <Helmet title="HMS" />
         <TopNav />
         <main>
           {
