@@ -20,6 +20,11 @@ HMS is still in very very early development, and any help is appreciated!
 
 Code, bugfixes, and pull requests are welcome, but I'd also love to hear organizer perspectives--what would *you* find useful to have?  [Let's chat!](https://github.com/chen-ye/hms-react/issues)
 
+## Debugging
+If you are running HMS locally, you have access to [MeteorToys](https://atmospherejs.com/meteortoys/allthings), which allow you to observe and modify the data being stored in the background. Press `CTRL + M` to activate MeteorToys. Please note that (for obvious reasons), this is not deployed to release instances.
+
+You can debug React with the [React Dev Tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi), which adds a pane to your Chrome Developer tools where you can observe the flow of data through the frontend.  
+
 ## Status
 
 ### Stable
