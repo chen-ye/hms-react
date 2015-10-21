@@ -1,6 +1,6 @@
 FlowRouter.route('/', {
   name: 'home',
-  action: function(params) {
+  action(params) {
     /* The key 'content' is now a function */
     ReactLayout.render(MainLayout, {
       content() {
@@ -12,11 +12,16 @@ FlowRouter.route('/', {
 
 FlowRouter.route('/dashboard/event/checkin', {
   name: 'checkin',
-  action: function(params) {
+  action(params) {
     /* The key 'content' is now a function */
     ReactLayout.render(MainLayout, {
       content() {
-        return <Checkin />;
+        return (
+          <div>
+            <Helmet title="Check-in | HMS" />
+            <Checkin />
+          </div>
+        );
       }
     });
   }
@@ -24,11 +29,16 @@ FlowRouter.route('/dashboard/event/checkin', {
 
 FlowRouter.route('/dashboard/debug', {
   name: 'debug',
-  action: function(params) {
+  action(params) {
     /* The key 'content' is now a function */
     ReactLayout.render(MainLayout, {
       content() {
-        return <DebugView />;
+        return (
+          <div>
+            <Helmet title="Debug | HMS" />
+            <DebugView />
+          </div>
+        );
       }
     });
   }

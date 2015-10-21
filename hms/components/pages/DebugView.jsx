@@ -3,7 +3,6 @@ DebugView = React.createClass({
   render() {
     return (
       <div className="ui one column grid container">
-        <Helmet title="Debug | HMS" />
         <div className="ui column">
           <header className="ui basic segment">
             <h1>HMS Debug</h1>
