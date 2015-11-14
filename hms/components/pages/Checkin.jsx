@@ -1,5 +1,9 @@
+/* global React */
+/* global _ */
 Checkin = React.createClass({
 
+  /* global ReactMeteorData */
+  /* global Keybinding */
   mixins: [ReactMeteorData, Keybinding],
 
   keybindingsPlatformAgnostic: true,

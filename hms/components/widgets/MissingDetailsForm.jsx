@@ -1,3 +1,5 @@
+/* global React */
+/* global _ */
 MissingDetailsForm = React.createClass({
 
   propTypes: {
@@ -11,7 +13,7 @@ MissingDetailsForm = React.createClass({
 
   componentDidMount() {
     if (!!this._form) {
-      var $formNode = $(React.findDOMNode(this._form));
+      var $formNode = $(this._form);
       $formNode.find(".ui.dropdown").dropdown();
       if (!!this.props.onNewUser) {
         this.props.onNewUser();
@@ -21,7 +23,7 @@ MissingDetailsForm = React.createClass({
 
   componentDidUpdate(prevProps, prevState) {
     if (!!this._form) {
-      var $formNode = $(React.findDOMNode(this._form));
+      var $formNode = $(this._form);
       $formNode.find(".ui.dropdown").dropdown();
       if ((this.props.user._id !== prevProps.user._id) && !!this.props.onNewUser) {
         this.props.onNewUser();

@@ -1,3 +1,5 @@
+/* global React */
+/* global _ */
 TopNav = React.createClass({
 
   render() {
@@ -61,7 +63,7 @@ TopNav = React.createClass({
     );
   },
   componentDidMount: function() {
-    var navNode = this.refs.nav.getDOMNode();
+    var navNode = this.refs.nav;
     // fix main menu to page on passing
     $(navNode).visibility({
       type: 'fixed'

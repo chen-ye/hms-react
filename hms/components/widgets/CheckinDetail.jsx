@@ -1,3 +1,5 @@
+/* global React */
+/* global _ */
 CheckinDetails = React.createClass({
   propTypes: {
       user: React.PropTypes.object,
@@ -50,7 +52,7 @@ CheckinDetails = React.createClass({
 
   _checkMissing(missingData, user) {
     //console.log("_checkMissing", missingData, user);
-    missingArray = [];
+    var missingArray = [];
     _.each(missingData, function(value, key) {
       if(!value.accessor(user)) {
         value.missing = true;
