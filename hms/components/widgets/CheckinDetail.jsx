@@ -1,4 +1,5 @@
 /* global React */
+/* global ReactMotion */
 /* global _ */
 CheckinDetails = React.createClass({
   propTypes: {
@@ -89,17 +90,15 @@ CheckinDetails = React.createClass({
     return (
       <div className="ui basic segment">
         <Transition
-          measure={true}
-          onlyChild={true}
+          runOnMount={true}
           enter={{
-            height: 'auto',
+            height: ReactMotion.spring('auto', springParams),
             opacity: 1
           }}
           leave={{
-            height: 0,
+            height: ReactMotion.spring(0, springParams),
             opacity: 0
-          }}
-          springParams={springParams}>
+          }}>
           {
             !!this.props.user && this.state.initialMissing.length > 0 && !this.props.user.hackerStatus.checked_in &&
             <div className="ui collapsible container">
@@ -118,17 +117,15 @@ CheckinDetails = React.createClass({
           }
         </Transition>
         <Transition
-          measure={true}
-          onlyChild={true}
+          runOnMount={true}
           enter={{
-            height: 'auto',
+            height: ReactMotion.spring('auto', springParams),
             opacity: 1
           }}
           leave={{
-            height: 0,
+            height: ReactMotion.spring(0, springParams),
             opacity: 0
-          }}
-          springParams={springParams}>
+          }}>
           {
             !!this.props.user && !this.props.user.hackerStatus.checked_in &&
             <div className="ui collapsible container">

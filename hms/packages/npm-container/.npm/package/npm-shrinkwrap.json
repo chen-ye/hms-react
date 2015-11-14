@@ -216,6 +216,12 @@
         }
       }
     },
+    "react-addons-css-transition-group": {
+      "version": "0.14.2"
+    },
+    "react-dom": {
+      "version": "0.14.2"
+    },
     "react-helmet": {
       "version": "2.1.0",
       "dependencies": {
@@ -390,10 +396,23 @@
       }
     },
     "react-measure": {
-      "version": "0.1.3"
+      "version": "0.3.3",
+      "dependencies": {
+        "react-addons-shallow-compare": {
+          "version": "0.14.2"
+        },
+        "lodash.debounce": {
+          "version": "3.1.1",
+          "dependencies": {
+            "lodash._getnative": {
+              "version": "3.9.1"
+            }
+          }
+        }
+      }
     },
     "react-motion": {
-      "version": "0.3.0",
+      "version": "0.3.1",
       "dependencies": {
         "performance-now": {
           "version": "0.2.0"
@@ -404,10 +423,134 @@
       }
     },
     "react-motion-ui-pack": {
-      "version": "https://github.com/chen-ye/react-motion-ui-pack-meteor/tarball/4daf23f6478a67fe903cbd7117e1110b2cd07b76",
+      "version": "0.5.1",
       "dependencies": {
+        "react-addons-shallow-compare": {
+          "version": "0.14.2"
+        },
+        "react-measure": {
+          "version": "0.3.3",
+          "dependencies": {
+            "lodash.debounce": {
+              "version": "3.1.1",
+              "dependencies": {
+                "lodash._getnative": {
+                  "version": "3.9.1"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "react-selectize": {
+      "version": "https://github.com/chen-ye/react-selectize/tarball/4464c14a49d130efd3766d495742592a7f3b4949",
+      "dependencies": {
+        "prelude-extension": {
+          "version": "0.0.5"
+        },
+        "prelude-ls": {
+          "version": "1.1.2"
+        },
+        "react-motion": {
+          "version": "0.3.1",
+          "dependencies": {
+            "performance-now": {
+              "version": "0.2.0"
+            },
+            "raf": {
+              "version": "3.1.0"
+            }
+          }
+        },
+        "react-motion-ui-pack": {
+          "version": "0.5.1",
+          "dependencies": {
+            "react": {
+              "version": "0.14.2",
+              "dependencies": {
+                "envify": {
+                  "version": "3.4.0",
+                  "dependencies": {
+                    "through": {
+                      "version": "2.3.8"
+                    },
+                    "jstransform": {
+                      "version": "10.1.0",
+                      "dependencies": {
+                        "base62": {
+                          "version": "0.1.1"
+                        },
+                        "esprima-fb": {
+                          "version": "13001.1001.0-dev-harmony-fb"
+                        },
+                        "source-map": {
+                          "version": "0.1.31",
+                          "dependencies": {
+                            "amdefine": {
+                              "version": "1.0.0"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "fbjs": {
+                  "version": "0.3.2",
+                  "dependencies": {
+                    "core-js": {
+                      "version": "1.2.6"
+                    },
+                    "loose-envify": {
+                      "version": "1.1.0",
+                      "dependencies": {
+                        "js-tokens": {
+                          "version": "1.0.2"
+                        }
+                      }
+                    },
+                    "promise": {
+                      "version": "7.0.4",
+                      "dependencies": {
+                        "asap": {
+                          "version": "2.0.3"
+                        }
+                      }
+                    },
+                    "ua-parser-js": {
+                      "version": "0.7.9"
+                    },
+                    "whatwg-fetch": {
+                      "version": "0.9.0"
+                    }
+                  }
+                }
+              }
+            },
+            "react-addons-shallow-compare": {
+              "version": "0.14.2"
+            },
+            "react-measure": {
+              "version": "0.3.3",
+              "dependencies": {
+                "react-dom": {
+                  "version": "0.14.2"
+                },
+                "lodash.debounce": {
+                  "version": "3.1.1",
+                  "dependencies": {
+                    "lodash._getnative": {
+                      "version": "3.9.1"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
         "react": {
-          "version": "0.13.3",
+          "version": "0.14.2",
           "dependencies": {
             "envify": {
               "version": "3.4.0",
@@ -435,19 +578,38 @@
                   }
                 }
               }
+            },
+            "fbjs": {
+              "version": "0.3.2",
+              "dependencies": {
+                "core-js": {
+                  "version": "1.2.6"
+                },
+                "loose-envify": {
+                  "version": "1.1.0",
+                  "dependencies": {
+                    "js-tokens": {
+                      "version": "1.0.2"
+                    }
+                  }
+                },
+                "promise": {
+                  "version": "7.0.4",
+                  "dependencies": {
+                    "asap": {
+                      "version": "2.0.3"
+                    }
+                  }
+                },
+                "ua-parser-js": {
+                  "version": "0.7.9"
+                },
+                "whatwg-fetch": {
+                  "version": "0.9.0"
+                }
+              }
             }
           }
-        }
-      }
-    },
-    "react-selectize": {
-      "version": "https://github.com/chen-ye/react-selectize/tarball/e9fd88587318bd7ee507e06b47c75e56fb71ed05",
-      "dependencies": {
-        "prelude-extension": {
-          "version": "0.0.5"
-        },
-        "prelude-ls": {
-          "version": "1.1.2"
         }
       }
     },
