@@ -45,6 +45,7 @@ id-map@1.0.4
 insecure@1.0.4
 jquery@1.11.4
 jsx@0.2.3
+kadira:flow-router@2.9.0
 kadira:react-layout@1.5.2
 lai:collection-extensions@0.1.4
 launch-screen@1.0.4
@@ -55,7 +56,6 @@ logging@1.0.8
 meteor@1.1.10
 meteor-base@1.0.1
 meteorhacks:async@1.0.0
-meteorhacks:flow-router@1.19.0
 meteorhacks:npm@1.5.0
 meteortoys:allthings@2.2.0
 meteortoys:authenticate@2.1.0

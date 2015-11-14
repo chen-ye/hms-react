@@ -1,0 +1,34 @@
+// This file overrides the built-in Meteor runner
+// For more information see http://docs.c9.io:8080/#!/api/run-method-run
+{
+  "cmd": [
+    "meteor",
+    "--port",
+    "3000",
+    "$args"
+  ],
+  "info": "Meteor",
+  "working_dir": "$project_path",
+  "env": {
+    "NODE_OPTIONS": "${debug?--debug-brk=5757}",
+    "ROOT_URL": "http://137.116.89.6:3000",
+    "BIND_IP": "$IP"
+  },
+  "pathMap": [
+    {
+      "toInternal": {
+        "regex": "^app/",
+        "replacement": "/"
+      },
+      "toExternal": {
+        "regex": "^/(?=[^.])",
+        "replacement": "app/"
+      }
+    }
+  ],
+  "disabled": {
+    "liveUpdate": true
+  },
+  "debugger": "v8",
+  "debugport": 5757
+}

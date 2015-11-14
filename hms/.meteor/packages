@@ -31,7 +31,7 @@ meteorhacks:npm
 npm-container
 cosmos:browserify
 kadira:react-layout
-meteorhacks:flow-router
 meteortoys:allthings
 bigdsk:inputmask
 mquandalle:bower
+kadira:flow-router

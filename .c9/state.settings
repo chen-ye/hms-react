@@ -15,13 +15,13 @@
     },
     "console": {
         "@expanded": true,
-        "@height": 223,
+        "@height": 352,
         "@maximized": "false",
         "json()": {
             "meta": {
                 "accessList": [
-                    "tab20",
                     "searchResults",
+                    "tab20",
                     "tab17"
                 ]
             },
@@ -40,11 +40,10 @@
                         "meta": {
                             "searchResults": true,
                             "ignoreSave": true,
-                            "newfile": true,
-                            "timestamp": 1447523013307
+                            "newfile": true
                         },
                         "filter": true,
-                        "title": "searchresults",
+                        "title": "Search Results",
                         "tooltip": "/.c9/searchresults",
                         "ace": {}
                     },
@@ -56,26 +55,25 @@
                     "name": "tab17",
                     "path": "",
                     "className": [
-                        "tab17"
+                        "tab17",
+                        "focus"
                     ],
                     "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1447519812058
+                        },
                         "filter": true,
                         "title": "Terminal",
                         "terminal": {
                             "id": "devel_697",
                             "cwd": "",
-                            "width": 0,
-                            "height": 0,
-                            "scrollTop": 409
-                        },
-                        "hash": "67452301efcdab8998badcfe10325476c3d2e1f0",
-                        "meta": {
-                            "timestamp": 1447519812058
-                        },
-                        "changed": false
+                            "width": 1328,
+                            "height": 326
+                        }
                     },
                     "editorType": "terminal",
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "tab",
@@ -83,8 +81,7 @@
                     "path": "",
                     "className": [
                         "tab20",
-                        "running",
-                        "focus"
+                        "running"
                     ],
                     "document": {
                         "changed": false,
@@ -96,8 +93,8 @@
                         "tooltip": "meteor - Running",
                         "output": {
                             "id": "output415072",
-                            "width": 1328,
-                            "height": 197,
+                            "width": 0,
+                            "height": 0,
                             "config": {
                                 "command": "",
                                 "cwd": "/hms",
@@ -108,7 +105,7 @@
                                 "runner": "Meteor"
                             },
                             "running": {
-                                "pid": 3840,
+                                "pid": 7351,
                                 "name": "output415072",
                                 "running": 2,
                                 "runner": [
@@ -151,7 +148,7 @@
                         }
                     },
                     "editorType": "output",
-                    "active": true
+                    "active": false
                 }
             ],
             "skin": "editor_tab",
@@ -176,7 +173,7 @@
             "@acestatus": 2,
             "@datagrid": 1,
             "@divider": 7,
-            "@document": 13,
+            "@document": 24,
             "@form": 5,
             "@immediate": 1,
             "@menu": 10,
@@ -185,10 +182,10 @@
             "@postmessage": 1,
             "@preferences": 1,
             "@preview": 1,
-            "@session": 11,
-            "@tab": 2,
+            "@session": 23,
+            "@tab": 17,
             "@tree": 2,
-            "@undoManager": 13
+            "@undoManager": 24
         }
     },
     "findinfiles": {
@@ -205,8 +202,8 @@
     },
     "panecycle": {
         "json()": [
-            "tab20",
-            "preview-https://localhost:8080"
+            "tab16",
+            "searchResults"
         ]
     },
     "panels": {
@@ -242,7 +239,7 @@
         }
     },
     "projecttree": {
-        "@scrollpos": 762,
+        "@scrollpos": 562,
         "@showfs": true,
         "expanded": {
             "json()": [
@@ -258,7 +255,9 @@
                 "/hms/components/widgets",
                 "~/react-selectize/src",
                 "~/react-selectize/node_modules/react-motion-ui-pack",
-                "~/react-selectize"
+                "~/react-selectize",
+                "/hms/components/widgets/user",
+                "/hms/User"
             ]
         },
         "favorites": {
@@ -288,6 +287,7 @@
     "search-history": {
         "search": {
             "json()": [
+                "getdom",
                 "transition",
                 "dropdown-transition",
                 "'auto'",
@@ -304,6 +304,8 @@
         },
         "searchfiles": {
             "json()": [
+                "React.findDOMNode",
+                "react.find",
                 "react.render",
                 "react.finddom",
                 "reactdom.find",
@@ -320,14 +322,21 @@
     },
     "tabs": {
         "json()": {
-            "focus": "tab20",
+            "focus": "tab17",
             "meta": {
                 "accessList": [
+                    "tab16",
                     "preview-https://localhost:8080",
+                    "tab3",
+                    "tab15",
+                    "tab10",
+                    "tab11",
+                    "tab0",
+                    "tab5",
+                    "tab4",
+                    "tab2",
                     "tab23",
                     "tab1",
-                    "tab0",
-                    "tab3",
                     "tab6",
                     "tab8",
                     "tab9",
@@ -345,36 +354,14 @@
                         "tab3"
                     ],
                     "document": {
-                        "filter": true,
-                        "title": "Checkin.jsx",
-                        "tooltip": "/hms/components/pages/Checkin.jsx",
-                        "ace": {
-                            "folds": [],
-                            "scrolltop": 660,
-                            "scrollleft": 0,
-                            "selection": {
-                                "start": {
-                                    "row": 72,
-                                    "column": 22
-                                },
-                                "end": {
-                                    "row": 72,
-                                    "column": 22
-                                },
-                                "isBackwards": false
-                            },
-                            "options": {
-                                "guessTabSize": true,
-                                "useWrapMode": false,
-                                "wrapToView": true
-                            },
-                            "firstLineState": 0
-                        },
-                        "hash": "0bfcc7c7af81a4c9b4dc11ae7ce1796eee6456de",
+                        "changed": false,
                         "meta": {
                             "timestamp": 1447518918153
                         },
-                        "changed": false
+                        "filter": true,
+                        "title": "Checkin.jsx",
+                        "tooltip": "/hms/components/pages/Checkin.jsx",
+                        "ace": {}
                     },
                     "editorType": "ace",
                     "active": false
@@ -625,12 +612,12 @@
                         "filter": true,
                         "title": "[P] https://localhost:8080",
                         "preview": {
-                            "path": "http://localhost:3000/",
+                            "path": "https://localhost:8080",
                             "previewer": "preview.browser"
                         }
                     },
                     "editorType": "preview",
-                    "active": true
+                    "active": false
                 },
                 {
                     "type": "tab",
@@ -651,6 +638,130 @@
                     },
                     "editorType": "ace",
                     "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab2",
+                    "path": "",
+                    "className": [
+                        "tab2"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1447524590618
+                        },
+                        "filter": true,
+                        "title": "Compare MissingDetailsForm.jsx",
+                        "diffview": {
+                            "oldPath": "HEAD:.c9/metadata/workspace/hms/components/widgets/MissingDetailsForm.jsx",
+                            "newPath": "STAGED:.c9/metadata/workspace/hms/components/widgets/MissingDetailsForm.jsx"
+                        }
+                    },
+                    "editorType": "diffview",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab4",
+                    "path": "",
+                    "className": [
+                        "tab4"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1447524609792
+                        },
+                        "filter": true,
+                        "title": "Compare Checkin.jsx",
+                        "diffview": {
+                            "oldPath": "HEAD:.c9/metadata/workspace/hms/components/pages/Checkin.jsx",
+                            "newPath": "STAGED:.c9/metadata/workspace/hms/components/pages/Checkin.jsx"
+                        }
+                    },
+                    "editorType": "diffview",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab5",
+                    "path": "/hms/components/widgets/RegistrationForm.jsx",
+                    "className": [
+                        "tab5"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1447525933685
+                        },
+                        "filter": true,
+                        "title": "RegistrationForm.jsx",
+                        "tooltip": "/hms/components/widgets/RegistrationForm.jsx",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab10",
+                    "path": "/hms/packages.json",
+                    "className": [
+                        "tab10"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1447526188237
+                        },
+                        "filter": true,
+                        "title": "packages.json",
+                        "tooltip": "/hms/packages.json",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab15",
+                    "path": "/hms/hms.csproj",
+                    "className": [
+                        "tab15"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1447489220175
+                        },
+                        "filter": true,
+                        "title": "hms.csproj",
+                        "tooltip": "/hms/hms.csproj",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab16",
+                    "path": "/hms/FlowRouter.jsx",
+                    "className": [
+                        "tab16"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1447526255977
+                        },
+                        "filter": true,
+                        "title": "FlowRouter.jsx",
+                        "tooltip": "/hms/FlowRouter.jsx",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": true
                 }
             ],
             "skin": "editor_tab",
@@ -665,7 +776,7 @@
     },
     "tree_selection": {
         "json()": [
-            "/hms/hms.jsx"
+            "/hms/FlowRouter.jsx"
         ]
     }
 }

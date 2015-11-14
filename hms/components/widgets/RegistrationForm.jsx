@@ -161,7 +161,7 @@ RegistrationForm = React.createClass({
     );
   },
   componentDidMount: function() {
-    var formNode = this.refs.form.getDOMNode();
+    var formNode = this.refs.form;
     $(formNode).find(".ui.dropdown").dropdown();
   }
 

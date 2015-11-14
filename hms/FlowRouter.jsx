@@ -1,3 +1,6 @@
+/* global FlowRouter */
+/* global ReactLayout */
+/* global MainLayout */
 FlowRouter.route('/', {
   name: 'home',
   action(params) {
