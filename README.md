@@ -1,6 +1,8 @@
 # HMS (0.0.0) Preview
 Hi!  This is HMS, what will hopefully become a full-featured hackathon management webapp that allows organizers to focus on the unique parts of their hackathon.  
 
+![Check-in system](https://d13yacurqjgara.cloudfront.net/users/329021/screenshots/2306660/hms-checkin-demo.gif)
+
 ## Installation
 1. You'll need Meteor, which you can install at [meteor.com](https://www.meteor.com/).
 
