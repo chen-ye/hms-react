@@ -32,7 +32,7 @@
                 "meteor": {
                     "command": "",
                     "cwd": "/hms",
-                    "debug": false,
+                    "debug": true,
                     "default": true,
                     "env": {},
                     "name": "meteor",

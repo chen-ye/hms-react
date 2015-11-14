@@ -7,8 +7,8 @@ MissingDetailsForm = React.createClass({
       missingData: React.PropTypes.object.isRequired,
       currentMissing: React.PropTypes.array.isRequired,
       initialMissing: React.PropTypes.array.isRequired,
-      onSubmit: React.PropTypes.function,
-      onNewUser: React.PropTypes.function
+      onSubmit: React.PropTypes.func,
+      onNewUser: React.PropTypes.func
   },
 
   componentDidMount() {

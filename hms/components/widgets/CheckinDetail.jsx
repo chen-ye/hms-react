@@ -1,10 +1,11 @@
 /* global React */
+/* global ReactDOM */
 /* global ReactMotion */
 /* global _ */
 CheckinDetails = React.createClass({
   propTypes: {
       user: React.PropTypes.object,
-      onCheckin: React.PropTypes.function
+      onCheckin: React.PropTypes.func
   },
 
   getInitialState() {
@@ -19,7 +20,7 @@ CheckinDetails = React.createClass({
   componentWillMount() {
     var self = this;
     this._focusFirstInput = _.debounce(function() {
-      $(React.findDOMNode(self)).find("input")[0].focus();
+      $(ReactDOM.findDOMNode(self)).find("input")[0].focus();
     }, 300, true);
   },
 
