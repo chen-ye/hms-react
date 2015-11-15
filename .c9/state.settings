@@ -15,7 +15,7 @@
     },
     "console": {
         "@expanded": true,
-        "@height": 352,
+        "@height": 196,
         "@maximized": "false",
         "json()": {
             "meta": {
@@ -45,7 +45,7 @@
                             "id": "devel_612",
                             "cwd": "",
                             "width": 1328,
-                            "height": 326
+                            "height": 170
                         }
                     },
                     "editorType": "terminal",
@@ -70,7 +70,7 @@
                             "id": "devel_58",
                             "cwd": "",
                             "width": 1328,
-                            "height": 326
+                            "height": 170
                         }
                     },
                     "editorType": "terminal",
@@ -123,19 +123,19 @@
             "@acestatus": 2,
             "@datagrid": 1,
             "@divider": 7,
-            "@document": 30,
+            "@document": 36,
             "@form": 5,
             "@immediate": 1,
-            "@menu": 7,
-            "@menuitem": 27,
+            "@menu": 10,
+            "@menuitem": 33,
             "@pane": 3,
             "@postmessage": 1,
             "@preferences": 1,
             "@preview": 1,
-            "@session": 26,
-            "@tab": 18,
+            "@session": 34,
+            "@tab": 24,
             "@tree": 2,
-            "@undoManager": 30
+            "@undoManager": 36
         }
     },
     "findinfiles": {
@@ -153,7 +153,7 @@
     "panecycle": {
         "json()": [
             "tab11",
-            "tab17"
+            "tab23"
         ]
     },
     "panels": {
@@ -189,7 +189,7 @@
         }
     },
     "projecttree": {
-        "@scrollpos": 110,
+        "@scrollpos": 266,
         "@showfs": true,
         "expanded": {
             "json()": [
@@ -282,10 +282,14 @@
             "focus": "tab11",
             "meta": {
                 "accessList": [
-                    "tab17",
-                    "tab8",
-                    "tab3",
+                    "tab23",
+                    "tab22",
+                    "tab21",
+                    "tab18",
                     "tab16",
+                    "tab8",
+                    "tab17",
+                    "tab3",
                     "tab9",
                     "tab15",
                     "tab10",
@@ -699,6 +703,92 @@
                         "ace": {}
                     },
                     "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab18",
+                    "path": "/hms/server/startup.jsx",
+                    "className": [
+                        "tab18"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1447551025454
+                        },
+                        "filter": true,
+                        "title": "startup.jsx",
+                        "tooltip": "/hms/server/startup.jsx",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab21",
+                    "path": "",
+                    "className": [
+                        "tab21"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1447551261542
+                        },
+                        "filter": true,
+                        "title": "Compare package.json",
+                        "diffview": {
+                            "oldPath": "PREVIOUS:hms/packages/npm-container/.npm/package-new-1djvt/package.json",
+                            "newPath": "MODIFIED:hms/packages/npm-container/.npm/package-new-1djvt/package.json"
+                        }
+                    },
+                    "editorType": "diffview",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab22",
+                    "path": "",
+                    "className": [
+                        "tab22"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1447551263364
+                        },
+                        "filter": true,
+                        "title": "Compare npm-shrinkwrap.json",
+                        "diffview": {
+                            "oldPath": "PREVIOUS:hms/packages/npm-container/.npm/package-new-1djvt/npm-shrinkwrap.json",
+                            "newPath": "MODIFIED:hms/packages/npm-container/.npm/package-new-1djvt/npm-shrinkwrap.json"
+                        }
+                    },
+                    "editorType": "diffview",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab23",
+                    "path": "",
+                    "className": [
+                        "tab23"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1447551265218
+                        },
+                        "filter": true,
+                        "title": "Compare startup.jsx",
+                        "diffview": {
+                            "oldPath": "PREVIOUS:hms/server/startup.jsx",
+                            "newPath": "MODIFIED:hms/server/startup.jsx"
+                        }
+                    },
+                    "editorType": "diffview",
                     "active": true
                 }
             ],
@@ -714,7 +804,7 @@
     },
     "tree_selection": {
         "json()": [
-            "/hms/private/config/adminSetup.json"
+            "/hms/server/startup.jsx"
         ]
     }
 }
