@@ -20,8 +20,8 @@
         "json()": {
             "meta": {
                 "accessList": [
-                    "tab11",
-                    "tab7"
+                    "tab7",
+                    "tab11"
                 ]
             },
             "name": "pane1",
@@ -43,7 +43,7 @@
                         "terminal": {
                             "id": "devel_612",
                             "cwd": "",
-                            "width": 1328,
+                            "width": 1528,
                             "height": 326
                         }
                     },
@@ -68,7 +68,7 @@
                         "terminal": {
                             "id": "devel_58",
                             "cwd": "",
-                            "width": 1328,
+                            "width": 1528,
                             "height": 326
                         }
                     },
@@ -97,20 +97,20 @@
             "@ace.repl": 1,
             "@acestatus": 2,
             "@datagrid": 1,
-            "@divider": 4,
-            "@document": 27,
+            "@divider": 7,
+            "@document": 28,
             "@form": 5,
             "@immediate": 1,
-            "@menu": 5,
-            "@menuitem": 13,
+            "@menu": 7,
+            "@menuitem": 27,
             "@pane": 3,
             "@postmessage": 1,
             "@preferences": 1,
             "@preview": 1,
-            "@session": 23,
-            "@tab": 16,
+            "@session": 24,
+            "@tab": 17,
             "@tree": 2,
-            "@undoManager": 27
+            "@undoManager": 28
         }
     },
     "findinfiles": {
@@ -127,12 +127,12 @@
     },
     "panecycle": {
         "json()": [
-            "tab11",
-            "tab9"
+            "tab16",
+            "tab7"
         ]
     },
     "panels": {
-        "@active-left": "tree",
+        "@active-left": "none",
         "@active-right": "none",
         "commands.panel": {
             "@enabled": "true",
@@ -256,10 +256,11 @@
             "focus": "tab11",
             "meta": {
                 "accessList": [
+                    "tab16",
+                    "tab3",
                     "tab9",
                     "tab15",
                     "tab10",
-                    "tab3",
                     "tab6",
                     "tab8",
                     "tab0",
@@ -281,36 +282,14 @@
                         "tab3"
                     ],
                     "document": {
-                        "filter": true,
-                        "title": "Checkin.jsx",
-                        "tooltip": "/hms/components/pages/Checkin.jsx",
-                        "ace": {
-                            "folds": [],
-                            "scrolltop": 0,
-                            "scrollleft": 0,
-                            "selection": {
-                                "start": {
-                                    "row": 0,
-                                    "column": 0
-                                },
-                                "end": {
-                                    "row": 1,
-                                    "column": 14
-                                },
-                                "isBackwards": true
-                            },
-                            "options": {
-                                "guessTabSize": true,
-                                "useWrapMode": false,
-                                "wrapToView": true
-                            },
-                            "firstLineState": 0
-                        },
-                        "hash": "0bfcc7c7af81a4c9b4dc11ae7ce1796eee6456de",
+                        "changed": false,
                         "meta": {
                             "timestamp": 1447546660028
                         },
-                        "changed": false
+                        "filter": true,
+                        "title": "Checkin.jsx",
+                        "tooltip": "/hms/components/pages/Checkin.jsx",
+                        "ace": {}
                     },
                     "editorType": "ace",
                     "active": false
@@ -417,7 +396,7 @@
                         "ace": {}
                     },
                     "editorType": "ace",
-                    "active": true
+                    "active": false
                 },
                 {
                     "type": "tab",
@@ -676,6 +655,26 @@
                     },
                     "editorType": "ace",
                     "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab16",
+                    "path": "/hms/components/widgets/CheckinReminders.jsx",
+                    "className": [
+                        "tab16"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1447548793071
+                        },
+                        "filter": true,
+                        "title": "CheckinReminders.jsx",
+                        "tooltip": "/hms/components/widgets/CheckinReminders.jsx",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": true
                 }
             ],
             "skin": "editor_tab",

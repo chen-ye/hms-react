@@ -1,3 +1,8 @@
+/* global React */
+/* global Roles */
+/* global Keybinding */
+/* global _ */
+
 CheckinReminders = React.createClass({
 
   propTypes: {
@@ -43,7 +48,7 @@ CheckinReminders = React.createClass({
       <form id="checkinReminders" className="ui form" onSubmit={this._handleCheckin}>
         <div className="ui inverted dimmer" ref={(dimmer) => {
             if (!!dimmer) {
-              var $dimmerNode = $(dimmer.getDOMNode());
+              var $dimmerNode = $(dimmer);
               $dimmerNode.dimmer({
                 closable: false
               });
