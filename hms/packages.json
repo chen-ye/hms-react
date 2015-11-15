@@ -1,9 +1,9 @@
 {
-  "react-selectize": "https://github.com/chen-ye/react-selectize/tarball/1248de3991ed265a34ff6b5b9dd9a4b1354ccd83",
+  "react-selectize": "https://github.com/chen-ye/react-selectize/tarball/6b83b0b7fcaa774beafd26bd5182c006b7fb2385",
   "react-motion": "0.3.1",
   "react-motion-ui-pack": "https://github.com/chen-ye/react-motion-ui-pack-meteor/tarball/c50b685b0701911b30e28592cf0c0f60d31a5647",
   "react-measure": "https://github.com/chen-ye/react-measure/tarball/824b8054f4eddbfe5366cc439b21c1f884bcf617",
-  "react-maskedinput-plus": "0.0.13",
+  "react-maskedinput": "3.0.0",
   "react-keybinding": "https://github.com/chen-ye/react-keybinding/tarball/7dd0ec3246c5100e58c13a4588bc89534684c100",
   "react-helmet": "2.1.1",
   "externalify": "0.1.0",

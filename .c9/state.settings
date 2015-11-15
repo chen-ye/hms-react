@@ -18,159 +18,67 @@
         "@height": 352,
         "@maximized": "false",
         "json()": {
+            "meta": {
+                "accessList": [
+                    "tab11",
+                    "tab7"
+                ]
+            },
+            "name": "pane1",
             "nodes": [
                 {
-                    "type": "pane",
-                    "name": "pane1",
-                    "nodes": [
-                        {
-                            "type": "tab",
-                            "name": "searchResults",
-                            "path": "/.c9/searchresults",
-                            "className": [
-                                "searchResults",
-                                "changed"
-                            ],
-                            "document": {
-                                "changed": true,
-                                "filter": true,
-                                "title": "Search Results",
-                                "tooltip": "/.c9/searchresults",
-                                "ace": {
-                                    "folds": [],
-                                    "customSyntax": "c9search",
-                                    "scrolltop": 0,
-                                    "scrollleft": 0,
-                                    "selection": {
-                                        "start": {
-                                            "row": 4,
-                                            "column": 0
-                                        },
-                                        "end": {
-                                            "row": 4,
-                                            "column": 0
-                                        },
-                                        "isBackwards": false
-                                    },
-                                    "options": {
-                                        "tabSize": 4,
-                                        "useSoftTabs": true,
-                                        "guessTabSize": false,
-                                        "useWrapMode": false,
-                                        "wrapToView": true
-                                    },
-                                    "firstLineState": 0
-                                },
-                                "meta": {
-                                    "searchResults": true,
-                                    "ignoreSave": true,
-                                    "newfile": true,
-                                    "timestamp": 1447539990205
-                                }
-                            },
-                            "editorType": "ace",
-                            "active": false
-                        },
-                        {
-                            "type": "tab",
-                            "name": "tab17",
-                            "path": "",
-                            "className": [
-                                "tab17",
-                                "focus"
-                            ],
-                            "document": {
-                                "changed": false,
-                                "meta": {
-                                    "timestamp": 1447519812058
-                                },
-                                "filter": true,
-                                "title": "Terminal",
-                                "terminal": {
-                                    "id": "devel_697",
-                                    "cwd": "",
-                                    "width": 663,
-                                    "height": 326
-                                }
-                            },
-                            "editorType": "terminal",
-                            "active": true
-                        },
-                        {
-                            "type": "tab",
-                            "name": "tab7",
-                            "path": "",
-                            "className": [
-                                "tab7"
-                            ],
-                            "document": {
-                                "changed": false,
-                                "meta": {
-                                    "timestamp": 1447540636109
-                                },
-                                "filter": true,
-                                "title": "Terminal",
-                                "terminal": {
-                                    "id": "devel_415",
-                                    "cwd": "",
-                                    "width": 663,
-                                    "height": 326
-                                }
-                            },
-                            "editorType": "terminal",
-                            "active": false
-                        }
+                    "type": "tab",
+                    "name": "tab7",
+                    "path": "",
+                    "className": [
+                        "tab7"
                     ],
-                    "skin": "editor_tab",
-                    "skinset": "default",
-                    "meta": {
-                        "accessList": [
-                            "tab17",
-                            "tab7",
-                            "searchResults"
-                        ]
-                    }
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1447547109098
+                        },
+                        "filter": true,
+                        "title": "Terminal",
+                        "terminal": {
+                            "id": "devel_612",
+                            "cwd": "",
+                            "width": 1328,
+                            "height": 326
+                        }
+                    },
+                    "editorType": "terminal",
+                    "active": false
                 },
                 {
-                    "type": "pane",
-                    "name": "pane2",
-                    "nodes": [
-                        {
-                            "type": "tab",
-                            "name": "tab24",
-                            "path": "",
-                            "className": [
-                                "tab24"
-                            ],
-                            "document": {
-                                "changed": false,
-                                "meta": {
-                                    "timestamp": 1447543538883
-                                },
-                                "filter": true,
-                                "title": "Terminal",
-                                "terminal": {
-                                    "id": "devel_260",
-                                    "cwd": "",
-                                    "width": 664,
-                                    "height": 326
-                                }
-                            },
-                            "editorType": "terminal",
-                            "active": true
-                        }
+                    "type": "tab",
+                    "name": "tab11",
+                    "path": "",
+                    "className": [
+                        "tab11",
+                        "focus"
                     ],
-                    "width": "50%",
-                    "skin": "editor_tab",
-                    "skinset": "default",
-                    "meta": {
-                        "accessList": [
-                            "tab24"
-                        ]
-                    }
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1447547163524
+                        },
+                        "filter": true,
+                        "title": "Terminal",
+                        "terminal": {
+                            "id": "devel_58",
+                            "cwd": "",
+                            "width": 1328,
+                            "height": 326
+                        }
+                    },
+                    "editorType": "terminal",
+                    "active": true
                 }
             ],
-            "type": "hsplitbox"
+            "skin": "editor_tab",
+            "skinset": "default",
+            "type": "pane"
         }
     },
     "experiments": {
@@ -185,24 +93,24 @@
     },
     "ext": {
         "counters": {
-            "@ace": 1,
+            "@ace": 2,
             "@ace.repl": 1,
-            "@acestatus": 1,
+            "@acestatus": 2,
             "@datagrid": 1,
-            "@divider": 7,
-            "@document": 30,
+            "@divider": 4,
+            "@document": 27,
             "@form": 5,
             "@immediate": 1,
-            "@menu": 8,
-            "@menuitem": 30,
+            "@menu": 5,
+            "@menuitem": 13,
             "@pane": 3,
             "@postmessage": 1,
             "@preferences": 1,
             "@preview": 1,
-            "@session": 26,
-            "@tab": 26,
+            "@session": 23,
+            "@tab": 16,
             "@tree": 2,
-            "@undoManager": 30
+            "@undoManager": 27
         }
     },
     "findinfiles": {
@@ -219,9 +127,8 @@
     },
     "panecycle": {
         "json()": [
-            "tab17",
-            "tab10",
-            "tab24"
+            "tab11",
+            "tab9"
         ]
     },
     "panels": {
@@ -257,7 +164,7 @@
         }
     },
     "projecttree": {
-        "@scrollpos": -10,
+        "@scrollpos": 64,
         "@showfs": true,
         "expanded": {
             "json()": [
@@ -274,9 +181,10 @@
                 "~/react-selectize/src",
                 "~/react-selectize/node_modules/react-motion-ui-pack",
                 "/hms/components/widgets/user",
-                "~/react-measure",
                 "~/react-measure/src",
-                "~/react-measure/lib"
+                "~/react-measure/lib",
+                "~/react-selectize",
+                "~/react-selectize/public"
             ]
         },
         "favorites": {
@@ -306,6 +214,7 @@
     "search-history": {
         "search": {
             "json()": [
+                "c",
                 "824b805",
                 "document",
                 "getdom",
@@ -325,6 +234,7 @@
         },
         "searchfiles": {
             "json()": [
+                "maskedinput",
                 "React.findDOMNode",
                 "react.find",
                 "react.render",
@@ -343,27 +253,22 @@
     },
     "tabs": {
         "json()": {
-            "focus": "tab17",
+            "focus": "tab11",
             "meta": {
                 "accessList": [
-                    "tab10",
                     "tab9",
-                    "tab12",
-                    "tab25",
-                    "preview-https://localhost:8080",
+                    "tab15",
+                    "tab10",
                     "tab3",
-                    "tab16",
                     "tab6",
                     "tab8",
-                    "tab22",
-                    "tab23",
                     "tab0",
                     "preview-http://137.116.89.6:3000",
+                    "preview-https://localhost:8080",
                     "tab1",
                     "tab2",
                     "tab4",
-                    "tab5",
-                    "tab15"
+                    "tab5"
                 ]
             },
             "name": "pane3",
@@ -403,7 +308,7 @@
                         },
                         "hash": "0bfcc7c7af81a4c9b4dc11ae7ce1796eee6456de",
                         "meta": {
-                            "timestamp": 1447539979244
+                            "timestamp": 1447546660028
                         },
                         "changed": false
                     },
@@ -445,7 +350,7 @@
                         },
                         "hash": "519b62d7614705177a798ac4c6c73d59cfa14dd1",
                         "meta": {
-                            "timestamp": 1447539979244
+                            "timestamp": 1447546660028
                         },
                         "changed": false
                     },
@@ -487,7 +392,7 @@
                         },
                         "hash": "989292df3f689bd8df870f7f9b33a0b034f532ab",
                         "meta": {
-                            "timestamp": 1447539979244
+                            "timestamp": 1447546660028
                         },
                         "changed": false
                     },
@@ -504,7 +409,7 @@
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1447546141727
+                            "timestamp": 1447547922230
                         },
                         "filter": true,
                         "title": "MissingDetailsForm.jsx",
@@ -512,91 +417,7 @@
                         "ace": {}
                     },
                     "editorType": "ace",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab22",
-                    "path": "/.c9/runners/Meteor.run",
-                    "className": [
-                        "tab22"
-                    ],
-                    "document": {
-                        "filter": true,
-                        "title": "Meteor.run",
-                        "tooltip": "/.c9/runners/Meteor.run",
-                        "ace": {
-                            "folds": [],
-                            "scrolltop": 0,
-                            "scrollleft": 0,
-                            "selection": {
-                                "start": {
-                                    "row": 0,
-                                    "column": 0
-                                },
-                                "end": {
-                                    "row": 0,
-                                    "column": 0
-                                },
-                                "isBackwards": true
-                            },
-                            "options": {
-                                "guessTabSize": true,
-                                "useWrapMode": false,
-                                "wrapToView": true
-                            },
-                            "firstLineState": 0
-                        },
-                        "hash": "875d7096eeaafbb826cbd32653a054e259386f11",
-                        "meta": {
-                            "timestamp": 1447539979224
-                        },
-                        "changed": false
-                    },
-                    "editorType": "ace",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab23",
-                    "path": "/hms/hms.jsx",
-                    "className": [
-                        "tab23"
-                    ],
-                    "document": {
-                        "filter": true,
-                        "title": "hms.jsx",
-                        "tooltip": "/hms/hms.jsx",
-                        "ace": {
-                            "folds": [],
-                            "scrolltop": 0,
-                            "scrollleft": 0,
-                            "selection": {
-                                "start": {
-                                    "row": 0,
-                                    "column": 0
-                                },
-                                "end": {
-                                    "row": 0,
-                                    "column": 0
-                                },
-                                "isBackwards": false
-                            },
-                            "options": {
-                                "guessTabSize": true,
-                                "useWrapMode": false,
-                                "wrapToView": true
-                            },
-                            "firstLineState": 0
-                        },
-                        "hash": "67452301efcdab8998badcfe10325476c3d2e1f0",
-                        "meta": {
-                            "timestamp": 1447539979248
-                        },
-                        "changed": false
-                    },
-                    "editorType": "ace",
-                    "active": false
+                    "active": true
                 },
                 {
                     "type": "tab",
@@ -633,7 +454,7 @@
                         },
                         "hash": "f07e6fa18e2a95ef4c91e1f8addb6585f2ff0545",
                         "meta": {
-                            "timestamp": 1447539979244
+                            "timestamp": 1447546660028
                         },
                         "changed": false
                     },
@@ -671,16 +492,17 @@
                         "preview-https---localhost-8080"
                     ],
                     "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1447523954908
-                        },
                         "filter": true,
                         "title": "[P] https://localhost:8080",
                         "preview": {
                             "path": "https://localhost:8080",
                             "previewer": "preview.browser"
-                        }
+                        },
+                        "hash": "67452301efcdab8998badcfe10325476c3d2e1f0",
+                        "meta": {
+                            "timestamp": 1447523954908
+                        },
+                        "changed": false
                     },
                     "editorType": "preview",
                     "active": false
@@ -720,7 +542,7 @@
                         },
                         "hash": "4749242954eceb974b54b8fe8cb78a827043f7c3",
                         "meta": {
-                            "timestamp": 1447539979228
+                            "timestamp": 1447546659996
                         },
                         "changed": false
                     },
@@ -808,7 +630,7 @@
                         },
                         "hash": "1ecd5a5bb0221e55fcc12275acc44e9b3d1d0c7e",
                         "meta": {
-                            "timestamp": 1447539979248
+                            "timestamp": 1447546660028
                         },
                         "changed": false
                     },
@@ -825,7 +647,7 @@
                     "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1447546496805
+                            "timestamp": 1447547879180
                         },
                         "filter": true,
                         "title": "packages.json",
@@ -833,105 +655,23 @@
                         "ace": {}
                     },
                     "editorType": "ace",
-                    "active": true
+                    "active": false
                 },
                 {
                     "type": "tab",
                     "name": "tab15",
-                    "path": "/hms/hms.csproj",
+                    "path": "/hms/lib/app.browserify.js",
                     "className": [
                         "tab15"
                     ],
                     "document": {
-                        "filter": true,
-                        "title": "hms.csproj",
-                        "tooltip": "/hms/hms.csproj",
-                        "ace": {
-                            "folds": [],
-                            "scrolltop": 0,
-                            "scrollleft": 0,
-                            "selection": {
-                                "start": {
-                                    "row": 0,
-                                    "column": 0
-                                },
-                                "end": {
-                                    "row": 0,
-                                    "column": 0
-                                },
-                                "isBackwards": true
-                            },
-                            "options": {
-                                "guessTabSize": true,
-                                "useWrapMode": false,
-                                "wrapToView": true
-                            },
-                            "firstLineState": 0
-                        },
-                        "hash": "5cdae6cc8389f336d50164ea7cd223dc10961900",
-                        "meta": {
-                            "timestamp": 1447539979248
-                        },
-                        "changed": false
-                    },
-                    "editorType": "ace",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab16",
-                    "path": "/hms/FlowRouter.jsx",
-                    "className": [
-                        "tab16"
-                    ],
-                    "document": {
                         "changed": false,
                         "meta": {
-                            "timestamp": 1447539979228
+                            "timestamp": 1447547898454
                         },
                         "filter": true,
-                        "title": "FlowRouter.jsx",
-                        "tooltip": "/hms/FlowRouter.jsx",
-                        "ace": {}
-                    },
-                    "editorType": "ace",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab12",
-                    "path": "~/react-measure/src/Resize-Handler.js",
-                    "className": [
-                        "tab12"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1447543776460
-                        },
-                        "filter": true,
-                        "title": "Resize-Handler.js",
-                        "tooltip": "~/react-measure/src/Resize-Handler.js",
-                        "ace": {}
-                    },
-                    "editorType": "ace",
-                    "active": false
-                },
-                {
-                    "type": "tab",
-                    "name": "tab25",
-                    "path": "~/react-measure/lib/Resize-Handler.js",
-                    "className": [
-                        "tab25"
-                    ],
-                    "document": {
-                        "changed": false,
-                        "meta": {
-                            "timestamp": 1447543748439
-                        },
-                        "filter": true,
-                        "title": "Resize-Handler.js",
-                        "tooltip": "~/react-measure/lib/Resize-Handler.js",
+                        "title": "app.browserify.js",
+                        "tooltip": "/hms/lib/app.browserify.js",
                         "ace": {}
                     },
                     "editorType": "ace",
@@ -950,7 +690,7 @@
     },
     "tree_selection": {
         "json()": [
-            "~/react-measure/src/Resize-Handler.js"
+            "~/react-selectize/src/ReactSelectize.js"
         ]
     }
 }

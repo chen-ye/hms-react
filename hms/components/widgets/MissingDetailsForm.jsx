@@ -77,7 +77,7 @@ MissingDetailsForm = React.createClass({
                     };
                     Meteor.users.update(this.props.user._id, modifier, {});
                   }}
-                  pattern={phonePattern}
+                  mask={phonePattern}
                   />
               </div>
             </div>
