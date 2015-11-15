@@ -1,4 +1,4 @@
-# HMS (0.0.0) Preview
+# HMS (0.0.1) Preview
 Hi!  This is HMS, what will hopefully become a full-featured hackathon management webapp that allows organizers to focus on the unique parts of their hackathon.  
 
 ![Check-in system](https://d13yacurqjgara.cloudfront.net/users/329021/screenshots/2306660/hms-checkin-demo.gif)
