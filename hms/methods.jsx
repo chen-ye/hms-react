@@ -27,7 +27,7 @@ Meteor.methods({
    * @method updateUser
    * @param {String} targetUserId _id of user to update
    * @param {Mongo Modifier} modifier How to update the user
-   */
+   */ 
   updateUser(targetUserId, modifier) {
     const loggedInUser = Meteor.user();
 
