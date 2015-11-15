@@ -1,12 +1,12 @@
 [
     {
-        "name": "User 1",
-        "email": "hey@test.com",
-        "roles": ["admin", "hacker"]
+        "name": "Josiah Carberry",
+        "email": "josiah@hms.com",
+        "roles": ["admin", "organizer", "hacker"]
     },
     {
-        "name": "User 2",
-        "email": "oy@test.com",
-        "roles": []
+        "name": "Chen Ye",
+        "email": "cye@test.com",
+        "roles": ["organizer","volunteer"]
     }
 ]

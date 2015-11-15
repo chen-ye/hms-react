@@ -20,8 +20,9 @@
         "json()": {
             "meta": {
                 "accessList": [
+                    "tab11",
                     "tab7",
-                    "tab11"
+                    "searchResults"
                 ]
             },
             "name": "pane1",
@@ -43,7 +44,7 @@
                         "terminal": {
                             "id": "devel_612",
                             "cwd": "",
-                            "width": 1528,
+                            "width": 1328,
                             "height": 326
                         }
                     },
@@ -68,12 +69,36 @@
                         "terminal": {
                             "id": "devel_58",
                             "cwd": "",
-                            "width": 1528,
+                            "width": 1328,
                             "height": 326
                         }
                     },
                     "editorType": "terminal",
                     "active": true
+                },
+                {
+                    "type": "tab",
+                    "name": "searchResults",
+                    "path": "/.c9/searchresults",
+                    "className": [
+                        "searchResults",
+                        "changed"
+                    ],
+                    "document": {
+                        "changed": true,
+                        "meta": {
+                            "searchResults": true,
+                            "ignoreSave": true,
+                            "newfile": true,
+                            "timestamp": 1447548991156
+                        },
+                        "filter": true,
+                        "title": "Search Results",
+                        "tooltip": "/.c9/searchresults",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
+                    "active": false
                 }
             ],
             "skin": "editor_tab",
@@ -98,7 +123,7 @@
             "@acestatus": 2,
             "@datagrid": 1,
             "@divider": 7,
-            "@document": 28,
+            "@document": 30,
             "@form": 5,
             "@immediate": 1,
             "@menu": 7,
@@ -107,10 +132,10 @@
             "@postmessage": 1,
             "@preferences": 1,
             "@preview": 1,
-            "@session": 24,
-            "@tab": 17,
+            "@session": 26,
+            "@tab": 18,
             "@tree": 2,
-            "@undoManager": 28
+            "@undoManager": 30
         }
     },
     "findinfiles": {
@@ -127,12 +152,12 @@
     },
     "panecycle": {
         "json()": [
-            "tab16",
-            "tab7"
+            "tab11",
+            "tab17"
         ]
     },
     "panels": {
-        "@active-left": "none",
+        "@active-left": "tree",
         "@active-right": "none",
         "commands.panel": {
             "@enabled": "true",
@@ -164,7 +189,7 @@
         }
     },
     "projecttree": {
-        "@scrollpos": 64,
+        "@scrollpos": 110,
         "@showfs": true,
         "expanded": {
             "json()": [
@@ -176,14 +201,12 @@
                 "/hms/components/pages",
                 "!favorites",
                 "!fsroot",
-                "~",
                 "/hms/components/widgets",
                 "~/react-selectize/src",
                 "~/react-selectize/node_modules/react-motion-ui-pack",
                 "/hms/components/widgets/user",
                 "~/react-measure/src",
                 "~/react-measure/lib",
-                "~/react-selectize",
                 "~/react-selectize/public"
             ]
         },
@@ -196,8 +219,8 @@
                     "isFolder": true,
                     "offset": 0,
                     "status": "loaded",
-                    "isOpen": true,
-                    "className": "",
+                    "isOpen": false,
+                    "className": " hover",
                     "wasOpen": false
                 }
             ]
@@ -234,6 +257,9 @@
         },
         "searchfiles": {
             "json()": [
+                "spring",
+                "'auto'",
+                "springparams",
                 "maskedinput",
                 "React.findDOMNode",
                 "react.find",
@@ -256,13 +282,14 @@
             "focus": "tab11",
             "meta": {
                 "accessList": [
-                    "tab16",
+                    "tab17",
+                    "tab8",
                     "tab3",
+                    "tab16",
                     "tab9",
                     "tab15",
                     "tab10",
                     "tab6",
-                    "tab8",
                     "tab0",
                     "preview-http://137.116.89.6:3000",
                     "preview-https://localhost:8080",
@@ -344,36 +371,14 @@
                         "tab8"
                     ],
                     "document": {
-                        "filter": true,
-                        "title": "CheckinDetail.jsx",
-                        "tooltip": "/hms/components/widgets/CheckinDetail.jsx",
-                        "ace": {
-                            "folds": [],
-                            "scrolltop": 0,
-                            "scrollleft": 0,
-                            "selection": {
-                                "start": {
-                                    "row": 1,
-                                    "column": 18
-                                },
-                                "end": {
-                                    "row": 1,
-                                    "column": 18
-                                },
-                                "isBackwards": true
-                            },
-                            "options": {
-                                "guessTabSize": true,
-                                "useWrapMode": false,
-                                "wrapToView": true
-                            },
-                            "firstLineState": 0
-                        },
-                        "hash": "989292df3f689bd8df870f7f9b33a0b034f532ab",
+                        "changed": false,
                         "meta": {
                             "timestamp": 1447546660028
                         },
-                        "changed": false
+                        "filter": true,
+                        "title": "CheckinDetail.jsx",
+                        "tooltip": "/hms/components/widgets/CheckinDetail.jsx",
+                        "ace": {}
                     },
                     "editorType": "ace",
                     "active": false
@@ -674,6 +679,26 @@
                         "ace": {}
                     },
                     "editorType": "ace",
+                    "active": false
+                },
+                {
+                    "type": "tab",
+                    "name": "tab17",
+                    "path": "/hms/private/config/adminSetup.json",
+                    "className": [
+                        "tab17"
+                    ],
+                    "document": {
+                        "changed": false,
+                        "meta": {
+                            "timestamp": 1447549739323
+                        },
+                        "filter": true,
+                        "title": "adminSetup.json",
+                        "tooltip": "/hms/private/config/adminSetup.json",
+                        "ace": {}
+                    },
+                    "editorType": "ace",
                     "active": true
                 }
             ],
@@ -689,7 +714,7 @@
     },
     "tree_selection": {
         "json()": [
-            "~/react-selectize/src/ReactSelectize.js"
+            "/hms/private/config/adminSetup.json"
         ]
     }
 }
