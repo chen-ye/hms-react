@@ -15,7 +15,7 @@
     },
     "console": {
         "@expanded": true,
-        "@height": 196,
+        "@height": 559,
         "@maximized": "false",
         "json()": {
             "meta": {
@@ -45,7 +45,7 @@
                             "id": "devel_612",
                             "cwd": "",
                             "width": 1328,
-                            "height": 170
+                            "height": 533
                         }
                     },
                     "editorType": "terminal",
@@ -70,7 +70,7 @@
                             "id": "devel_58",
                             "cwd": "",
                             "width": 1328,
-                            "height": 170
+                            "height": 533
                         }
                     },
                     "editorType": "terminal",
@@ -207,7 +207,10 @@
                 "/hms/components/widgets/user",
                 "~/react-measure/src",
                 "~/react-measure/lib",
-                "~/react-selectize/public"
+                "~/react-selectize/public",
+                "/hms/private",
+                "/hms/private/config",
+                "/hms/server"
             ]
         },
         "favorites": {
