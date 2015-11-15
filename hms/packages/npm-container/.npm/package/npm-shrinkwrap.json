@@ -96,7 +96,7 @@
               "version": "1.0.2"
             },
             "xtend": {
-              "version": "4.0.0"
+              "version": "4.0.1"
             }
           }
         },
@@ -340,10 +340,10 @@
       "version": "0.0.13",
       "dependencies": {
         "babel-runtime": {
-          "version": "5.8.25",
+          "version": "5.8.34",
           "dependencies": {
             "core-js": {
-              "version": "1.2.1"
+              "version": "1.2.6"
             }
           }
         },
@@ -395,68 +395,6 @@
     "react-measure": {
       "version": "0.3.3",
       "dependencies": {
-        "react": {
-          "version": "0.14.2",
-          "dependencies": {
-            "envify": {
-              "version": "3.4.0",
-              "dependencies": {
-                "through": {
-                  "version": "2.3.8"
-                },
-                "jstransform": {
-                  "version": "10.1.0",
-                  "dependencies": {
-                    "base62": {
-                      "version": "0.1.1"
-                    },
-                    "esprima-fb": {
-                      "version": "13001.1001.0-dev-harmony-fb"
-                    },
-                    "source-map": {
-                      "version": "0.1.31",
-                      "dependencies": {
-                        "amdefine": {
-                          "version": "1.0.0"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "fbjs": {
-              "version": "0.3.2",
-              "dependencies": {
-                "core-js": {
-                  "version": "1.2.6"
-                },
-                "loose-envify": {
-                  "version": "1.1.0",
-                  "dependencies": {
-                    "js-tokens": {
-                      "version": "1.0.2"
-                    }
-                  }
-                },
-                "promise": {
-                  "version": "7.0.4",
-                  "dependencies": {
-                    "asap": {
-                      "version": "2.0.3"
-                    }
-                  }
-                },
-                "ua-parser-js": {
-                  "version": "0.7.9"
-                },
-                "whatwg-fetch": {
-                  "version": "0.9.0"
-                }
-              }
-            }
-          }
-        },
         "react-addons-shallow-compare": {
           "version": "0.14.2"
         },
@@ -482,70 +420,8 @@
       }
     },
     "react-motion-ui-pack": {
-      "version": "0.5.1",
+      "version": "https://github.com/chen-ye/react-motion-ui-pack-meteor/tarball/c50b685b0701911b30e28592cf0c0f60d31a5647",
       "dependencies": {
-        "react": {
-          "version": "0.14.2",
-          "dependencies": {
-            "envify": {
-              "version": "3.4.0",
-              "dependencies": {
-                "through": {
-                  "version": "2.3.8"
-                },
-                "jstransform": {
-                  "version": "10.1.0",
-                  "dependencies": {
-                    "base62": {
-                      "version": "0.1.1"
-                    },
-                    "esprima-fb": {
-                      "version": "13001.1001.0-dev-harmony-fb"
-                    },
-                    "source-map": {
-                      "version": "0.1.31",
-                      "dependencies": {
-                        "amdefine": {
-                          "version": "1.0.0"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            },
-            "fbjs": {
-              "version": "0.3.2",
-              "dependencies": {
-                "core-js": {
-                  "version": "1.2.6"
-                },
-                "loose-envify": {
-                  "version": "1.1.0",
-                  "dependencies": {
-                    "js-tokens": {
-                      "version": "1.0.2"
-                    }
-                  }
-                },
-                "promise": {
-                  "version": "7.0.4",
-                  "dependencies": {
-                    "asap": {
-                      "version": "2.0.3"
-                    }
-                  }
-                },
-                "ua-parser-js": {
-                  "version": "0.7.9"
-                },
-                "whatwg-fetch": {
-                  "version": "0.9.0"
-                }
-              }
-            }
-          }
-        },
         "react-addons-shallow-compare": {
           "version": "0.14.2"
         }
@@ -559,6 +435,103 @@
         },
         "prelude-ls": {
           "version": "1.1.2"
+        },
+        "react-motion": {
+          "version": "0.3.1",
+          "dependencies": {
+            "performance-now": {
+              "version": "0.2.0"
+            },
+            "raf": {
+              "version": "3.1.0"
+            }
+          }
+        },
+        "react-motion-ui-pack": {
+          "version": "0.5.1",
+          "dependencies": {
+            "react": {
+              "version": "0.14.2",
+              "dependencies": {
+                "envify": {
+                  "version": "3.4.0",
+                  "dependencies": {
+                    "through": {
+                      "version": "2.3.8"
+                    },
+                    "jstransform": {
+                      "version": "10.1.0",
+                      "dependencies": {
+                        "base62": {
+                          "version": "0.1.1"
+                        },
+                        "esprima-fb": {
+                          "version": "13001.1001.0-dev-harmony-fb"
+                        },
+                        "source-map": {
+                          "version": "0.1.31",
+                          "dependencies": {
+                            "amdefine": {
+                              "version": "1.0.0"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "fbjs": {
+                  "version": "0.3.2",
+                  "dependencies": {
+                    "core-js": {
+                      "version": "1.2.6"
+                    },
+                    "loose-envify": {
+                      "version": "1.1.0",
+                      "dependencies": {
+                        "js-tokens": {
+                          "version": "1.0.2"
+                        }
+                      }
+                    },
+                    "promise": {
+                      "version": "7.0.4",
+                      "dependencies": {
+                        "asap": {
+                          "version": "2.0.3"
+                        }
+                      }
+                    },
+                    "ua-parser-js": {
+                      "version": "0.7.9"
+                    },
+                    "whatwg-fetch": {
+                      "version": "0.9.0"
+                    }
+                  }
+                }
+              }
+            },
+            "react-addons-shallow-compare": {
+              "version": "0.14.2"
+            },
+            "react-measure": {
+              "version": "0.3.3",
+              "dependencies": {
+                "react-dom": {
+                  "version": "0.14.2"
+                },
+                "lodash.debounce": {
+                  "version": "3.1.1",
+                  "dependencies": {
+                    "lodash._getnative": {
+                      "version": "3.9.1"
+                    }
+                  }
+                }
+              }
+            }
+          }
         },
         "react": {
           "version": "0.14.2",
@@ -634,33 +607,29 @@
           "version": "0.13.3",
           "dependencies": {
             "commoner": {
-              "version": "0.10.3",
+              "version": "0.10.4",
               "dependencies": {
-                "q": {
-                  "version": "1.1.2"
-                },
-                "recast": {
-                  "version": "0.10.33",
+                "commander": {
+                  "version": "2.9.0",
                   "dependencies": {
-                    "esprima-fb": {
-                      "version": "15001.1001.0-dev-harmony-fb"
-                    },
-                    "source-map": {
-                      "version": "0.5.1"
-                    },
-                    "ast-types": {
-                      "version": "0.8.12"
+                    "graceful-readlink": {
+                      "version": "1.0.1"
                     }
                   }
                 },
-                "commander": {
-                  "version": "2.5.1"
-                },
-                "graceful-fs": {
-                  "version": "3.0.8"
+                "detective": {
+                  "version": "4.3.1",
+                  "dependencies": {
+                    "acorn": {
+                      "version": "1.2.2"
+                    },
+                    "defined": {
+                      "version": "1.0.0"
+                    }
+                  }
                 },
                 "glob": {
-                  "version": "4.2.2",
+                  "version": "5.0.15",
                   "dependencies": {
                     "inflight": {
                       "version": "1.0.4",
@@ -674,13 +643,18 @@
                       "version": "2.0.1"
                     },
                     "minimatch": {
-                      "version": "1.0.0",
+                      "version": "3.0.0",
                       "dependencies": {
-                        "lru-cache": {
-                          "version": "2.7.0"
-                        },
-                        "sigmund": {
-                          "version": "1.0.1"
+                        "brace-expansion": {
+                          "version": "1.1.1",
+                          "dependencies": {
+                            "balanced-match": {
+                              "version": "0.2.1"
+                            },
+                            "concat-map": {
+                              "version": "0.0.1"
+                            }
+                          }
                         }
                       }
                     },
@@ -691,8 +665,17 @@
                           "version": "1.0.1"
                         }
                       }
+                    },
+                    "path-is-absolute": {
+                      "version": "1.0.0"
                     }
                   }
+                },
+                "graceful-fs": {
+                  "version": "4.1.2"
+                },
+                "iconv-lite": {
+                  "version": "0.4.13"
                 },
                 "mkdirp": {
                   "version": "0.5.1",
@@ -705,11 +688,22 @@
                 "private": {
                   "version": "0.1.6"
                 },
-                "install": {
-                  "version": "0.1.8"
+                "q": {
+                  "version": "1.4.1"
                 },
-                "iconv-lite": {
-                  "version": "0.4.13"
+                "recast": {
+                  "version": "0.10.38",
+                  "dependencies": {
+                    "esprima-fb": {
+                      "version": "15001.1001.0-dev-harmony-fb"
+                    },
+                    "source-map": {
+                      "version": "0.5.3"
+                    },
+                    "ast-types": {
+                      "version": "0.8.12"
+                    }
+                  }
                 }
               }
             },
